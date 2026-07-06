@@ -139,6 +139,7 @@ Notes:
 
 This repository is configured to deploy the game as a Cloudflare Worker with static assets:
 
+- Live Worker URL: [https://personality-escape-station.samsong-1a3.workers.dev](https://personality-escape-station.samsong-1a3.workers.dev)
 - Vite builds the game into `client/dist`.
 - Worker Static Assets serve the SPA and fixed game assets.
 - `worker/src/index.ts` handles `/api/*`, including Minimax Agent chat.

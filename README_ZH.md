@@ -137,6 +137,7 @@ npm run assets:generate -- --archetype JANK --only hotspot:jank-magnifier --forc
 
 本仓库已经配置为 Cloudflare Worker 托管游戏：
 
+- Worker 线上地址：[https://personality-escape-station.samsong-1a3.workers.dev](https://personality-escape-station.samsong-1a3.workers.dev)
 - Vite 会将游戏构建到 `client/dist`。
 - Worker Static Assets 负责托管 SPA 和固定游戏资产。
 - `worker/src/index.ts` 处理 `/api/*`，包括 Minimax Agent 聊天。
