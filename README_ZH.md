@@ -1,5 +1,7 @@
 # 人格出逃空间站
 
+> **在线体验:** [https://personality-escape-station.samsong-1a3.workers.dev](https://personality-escape-station.samsong-1a3.workers.dev)
+
 `人格出逃空间站 / Personality Escape Station` 是一个移动端优先的人格测试与竖屏像素空间项目：用户完成 10 题测试，生成可分享的像素身份卡，再进入一个 9:16 的人格空间，里面包含地图、主角、道具、互动 Agent、人格碎片和串门链接。
 
 本项目基于 MIT License 的 WorldX 改造，但当前已经不再是旧 WorldX 前端或 demo-world 运行时。仓库包含可玩的「人格出逃空间站」游戏、固定生成资产、生图管线和 Cloudflare Worker 部署配置。Worker 部署只打包游戏运行时和 API，不暴露生图入口。

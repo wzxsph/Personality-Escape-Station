@@ -1,5 +1,7 @@
 # Personality Escape Station
 
+> **Play now / 在线体验:** [https://personality-escape-station.samsong-1a3.workers.dev](https://personality-escape-station.samsong-1a3.workers.dev)
+
 Personality Escape Station is a mobile-first personality test and vertical pixel-room experience. Users answer a fixed 10-question test, receive a shareable pixel identity card, and enter a 9:16 personality room with props, NPC/Agent interactions, fragments, and visit links.
 
 This project is derived from the MIT-licensed WorldX project, but it is no longer the old WorldX frontend or demo-world runtime. The repository includes the playable `人格出逃空间站 / Personality Escape Station` game, fixed generated assets, the asset-generation pipeline, and Cloudflare Worker deployment. The Worker deployment packages the game runtime and API only; it does not expose an image-generation UI.
