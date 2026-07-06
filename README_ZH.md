@@ -161,7 +161,7 @@ npx wrangler secret put OPENAI_API_KEY
 
 ```toml
 OPENAI_BASE_URL = "https://api.minimaxi.com/v1"
-OPENAI_MODEL = "minimax-m3"
+OPENAI_MODEL = "minimax-m2.7"
 ```
 
 Worker 默认用内存保存房间和访问事件。若需要持久化串门事件，可创建 Cloudflare KV 命名空间，并在 `wrangler.toml` 中绑定为 `ROOMS_KV`。

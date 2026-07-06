@@ -300,7 +300,8 @@ router.post("/dialogue", async (req, res) => {
 
   const apiKey = process.env.OPENAI_API_KEY;
   const baseUrl = (process.env.OPENAI_BASE_URL || "https://api.minimaxi.com/v1").replace(/\/+$/, "");
-  const model = process.env.OPENAI_MODEL || "minimax-m3";
+  const model = process.env.OPENAI_MODEL || "minimax-m2.7";
+  const isMinimaxModel = baseUrl.includes("minimax") || model.toLowerCase().startsWith("minimax-");
   if (!apiKey) {
     res.status(503).json({ error: "OPENAI_API_KEY is not configured" });
     return;
@@ -319,38 +320,42 @@ router.post("/dialogue", async (req, res) => {
   ].join("\n");
 
   try {
-    const response = await fetch(`${baseUrl}/chat/completions`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model,
-        messages: [
-          { role: "system", content: `${systemPrompt}\n\n${safetyPrompt}\n\n当前轮次：${round}。` },
-          ...messages.map((message) => ({
-            role: message.role === "user" ? "user" : "assistant",
-            content: message.text,
-          })),
-          { role: "user", content: userText },
-        ],
-        temperature: 0.8,
-        max_tokens: dialogueTextLimits.modelMaxTokens,
-      }),
+    const firstText = await requestDialogueText({
+      apiKey,
+      baseUrl,
+      model,
+      isMinimaxModel,
+      temperature: 0.7,
+      messages: [
+        { role: "system", content: `${systemPrompt}\n\n${safetyPrompt}\n\n当前轮次：${round}。` },
+        ...messages.map((message) => ({
+          role: message.role === "user" ? "user" as const : "assistant" as const,
+          content: message.text,
+        })),
+        { role: "user" as const, content: userText },
+      ],
     });
-
-    if (!response.ok) {
-      const detail = await response.text();
-      res.status(502).json({ error: "dialogue model request failed", detail: detail.slice(0, 300) });
-      return;
-    }
-
-    const data = await response.json() as { choices?: Array<{ message?: { content?: string } }> };
-    const text = sanitizeDialogueText(data.choices?.[0]?.message?.content, dialogueTextLimits.modelReplyChars);
+    const text = firstText || await requestDialogueText({
+      apiKey,
+      baseUrl,
+      model,
+      isMinimaxModel,
+      temperature: 0.3,
+      messages: [
+        {
+          role: "system",
+          content: [
+            "你是人格出逃空间站里的短句 Agent。",
+            "直接回复用户一句中文台词，不要输出 <think> 或解释。",
+            `保持 ${archetypeId} / ${hotspotId} 的轻微荒诞和温柔。`,
+          ].join("\n"),
+        },
+        { role: "user", content: userText },
+      ],
+    });
     if (!text) {
       res.json({
-        response: "它把那段内部碎碎念收进抽屉里，只留下一个很轻的点头。",
+        response: "我刚才短暂掉线了一秒，但还是站在你这边。慢慢说，我在听。",
         provider: "local-safety-fallback",
         model,
         guardrail: "empty-after-filtering",
@@ -364,6 +369,45 @@ router.post("/dialogue", async (req, res) => {
     res.status(502).json({ error: "dialogue model request failed", detail: message });
   }
 });
+
+interface ChatCompletionMessage {
+  role: "system" | "user" | "assistant";
+  content: string;
+}
+
+interface DialogueRequestOptions {
+  apiKey: string;
+  baseUrl: string;
+  model: string;
+  isMinimaxModel: boolean;
+  temperature: number;
+  messages: ChatCompletionMessage[];
+}
+
+async function requestDialogueText(options: DialogueRequestOptions) {
+  const response = await fetch(`${options.baseUrl}/chat/completions`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${options.apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: options.model,
+      messages: options.messages,
+      temperature: options.temperature,
+      max_tokens: dialogueTextLimits.modelMaxTokens,
+      ...(options.isMinimaxModel ? { reasoning_split: true } : {}),
+    }),
+  });
+
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error(`dialogue model request failed: ${detail.slice(0, 300)}`);
+  }
+
+  const data = await response.json() as { choices?: Array<{ message?: { content?: string } }> };
+  return sanitizeDialogueText(data.choices?.[0]?.message?.content, dialogueTextLimits.modelReplyChars);
+}
 
 router.patch("/rooms/:roomId/events/:eventId", (req, res) => {
   const db = getDb();

@@ -11,7 +11,7 @@ run_worker_first = ["/api/*"]
 
 [vars]
 OPENAI_BASE_URL = "https://api.minimaxi.com/v1"
-OPENAI_MODEL = "minimax-m3"
+OPENAI_MODEL = "minimax-m2.7"
 
 [observability]
 enabled = true

@@ -163,7 +163,7 @@ Runtime defaults are defined in `wrangler.toml`:
 
 ```toml
 OPENAI_BASE_URL = "https://api.minimaxi.com/v1"
-OPENAI_MODEL = "minimax-m3"
+OPENAI_MODEL = "minimax-m2.7"
 ```
 
 Room/event persistence uses in-memory storage by default on Workers. For durable visit events, create a Cloudflare KV namespace and bind it as `ROOMS_KV` in `wrangler.toml`.
