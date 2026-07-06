@@ -1,0 +1,40 @@
+# Local editor / agent state
+.cursor/
+.claude/
+.ruff_cache/
+
+# Dependencies and build outputs
+node_modules/
+.venv/
+dist/
+build/
+coverage/
+.cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Generated worlds, assets, and runtime output
+output/
+assets-output/
+assets-output*.zip
+generated/runtime/
+*.zip
+*.log
+
+# Local databases
+server/data/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+
+# Learning / scratch material not shipped with this fork
+learn_WORLDX/
+learn_worldx/
+
+# OS noise
+.DS_Store
+Thumbs.db

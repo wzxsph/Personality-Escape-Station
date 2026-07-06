@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342415126",
+  "name": "冷门交换亭",
+  "description": "冷门交换亭，别人不要的碎片任务，会在这里变成稀有道具。。互动动作：翻找。固定摆放坐标：地图舞台 72%, 42%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:54:11.431Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:54:11.578Z"
+  }
+}

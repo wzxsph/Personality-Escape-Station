@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "F1SH",
+  "title": "低电量漂流水域",
+  "mood": "水面慢慢发光，整个空间都在鼓励你把力气留给真正值得的事情。",
+  "personality": "鱼王",
+  "palette": {
+    "floor": "#aacbc4",
+    "floorAlt": "#d0e4df",
+    "blocked": "#0c1820",
+    "wall": "#173447",
+    "trim": "#4f8a93",
+    "accent": "#f1bd83",
+    "glow": "#8be7ff",
+    "shadow": "#03090e"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

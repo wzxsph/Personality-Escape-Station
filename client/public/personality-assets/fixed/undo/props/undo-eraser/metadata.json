@@ -1,0 +1,28 @@
+{
+  "id": "char_1783343329203",
+  "name": "重录橡皮",
+  "description": "重录橡皮，专门擦掉“我怎么会这样说”的后劲。。互动动作：重录。固定摆放坐标：地图舞台 52%, 32%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:09:23.238Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:09:23.380Z"
+  }
+}

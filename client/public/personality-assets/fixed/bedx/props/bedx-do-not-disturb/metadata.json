@@ -1,0 +1,28 @@
+{
+  "id": "char_1783322563751",
+  "name": "勿扰灯牌",
+  "description": "勿扰灯牌，一盏会替你挡掉待办事项的门牌灯。。互动动作：挂起",
+  "createdAt": "2026-07-06T07:23:14.718Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 1
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T07:23:14.854Z"
+  }
+}

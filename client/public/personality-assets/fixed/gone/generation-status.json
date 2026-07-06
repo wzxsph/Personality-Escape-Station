@@ -1,0 +1,39 @@
+{
+  "archetypeId": "GONE",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone",
+  "startedAt": "2026-07-06T12:43:16.892Z",
+  "updatedAt": "2026-07-06T13:50:35.656Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone/map",
+      "updatedAt": "2026-07-06T13:50:35.476Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone/player/frames",
+      "updatedAt": "2026-07-06T13:50:35.656Z"
+    },
+    "hotspot:gone-mailbox": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone/props/gone-mailbox",
+      "updatedAt": "2026-07-06T13:11:07.407Z"
+    },
+    "hotspot:gone-window": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone/props/gone-window",
+      "updatedAt": "2026-07-06T13:11:07.407Z"
+    },
+    "hotspot:gone-signal-bar": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone/props/gone-signal-bar",
+      "updatedAt": "2026-07-06T13:11:07.407Z"
+    },
+    "hotspot:gone-attendant": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gone/agents/gone-attendant",
+      "updatedAt": "2026-07-06T13:11:07.407Z"
+    }
+  }
+}

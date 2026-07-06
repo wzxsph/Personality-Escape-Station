@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342039850",
+  "name": "离线邮箱",
+  "description": "离线邮箱，只有真正想你的人，才会把消息投到这里。。互动动作：查看。固定摆放坐标：地图舞台 18%, 60%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:47:51.658Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:47:51.822Z"
+  }
+}

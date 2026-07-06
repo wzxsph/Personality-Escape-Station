@@ -1,0 +1,28 @@
+{
+  "id": "char_1783322738039",
+  "name": "值班领事猫",
+  "description": "值班领事猫，它负责审核今晚有哪些人类焦虑不准入内。。一只拥有签证审批权的橘猫领事，用肢体语言办公，从不加班，永远站在你这边。",
+  "createdAt": "2026-07-06T07:26:24.280Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T07:26:24.419Z"
+  }
+}

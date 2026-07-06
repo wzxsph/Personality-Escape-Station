@@ -1,0 +1,28 @@
+{
+  "id": "char_1783322594895",
+  "name": "热可可机",
+  "description": "热可可机，每次按下按钮，杯沿都会冒出一点能续命的热气。。互动动作：续杯",
+  "createdAt": "2026-07-06T07:23:36.163Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T07:23:36.304Z"
+  }
+}

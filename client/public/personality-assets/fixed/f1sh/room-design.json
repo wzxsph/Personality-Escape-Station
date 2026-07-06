@@ -1,0 +1,128 @@
+{
+  "archetypeId": "F1SH",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 低电量漂流水域 的竖屏人格空间地图。\n人格主题：鱼王 / F1SH / Drift Monarch。\n空间氛围：水面慢慢发光，整个空间都在鼓励你把力气留给真正值得的事情。\n关键词：优雅划水、续航、漂流、战略性撤离\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 54%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "把电量留在值得的地方，不必被每件事都拖进深水区。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "f1sh-main-room",
+      "name": "低电量漂流水域",
+      "description": "水面慢慢发光，整个空间都在鼓励你把力气留给真正值得的事情。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "漂流浮岛 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "fish-left-wave",
+      "name": "软波",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 20%, 50%，尺寸约 20% x 18%",
+      "visualDescription": "软波"
+    },
+    {
+      "id": "fish-right-buoy",
+      "name": "低电浮标",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 80%, 34%，尺寸约 12% x 16%",
+      "visualDescription": "低电浮标"
+    },
+    {
+      "id": "fish-front-ripple",
+      "name": "水纹",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "水纹"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "fish-sofa",
+      "name": "摸鱼沙发",
+      "description": "坐上去以后，任何紧急感都会自动打八折。",
+      "visualDescription": "为互动道具「摸鱼沙发」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：坐上去以后，任何紧急感都会自动打八折。",
+      "placementHint": "中心约 30%, 56%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fish-sofa-interaction",
+          "name": "躺平",
+          "description": "沙发轻轻漂远，把不值得的事情一起带走。"
+        }
+      ]
+    },
+    {
+      "id": "fish-buoy",
+      "name": "低电浮标",
+      "description": "它不是警报，只是提醒你别把电量浪费在错误方向。",
+      "visualDescription": "为互动道具「低电浮标」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：它不是警报，只是提醒你别把电量浪费在错误方向。",
+      "placementHint": "中心约 70%, 48%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fish-buoy-interaction",
+          "name": "校准",
+          "description": "浮标亮起绿色小圈，今天的体力预算被重新分配。"
+        }
+      ]
+    },
+    {
+      "id": "fish-screen",
+      "name": "气泡屏幕",
+      "description": "任务列表会一条条变成漂浮气泡，自动过滤没必要的硬刚。",
+      "visualDescription": "为互动道具「气泡屏幕」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：任务列表会一条条变成漂浮气泡，自动过滤没必要的硬刚。",
+      "placementHint": "中心约 52%, 34%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fish-screen-interaction",
+          "name": "筛选",
+          "description": "几条吵闹事项漂走了，只剩真正值得处理的两三件。"
+        }
+      ]
+    },
+    {
+      "id": "fish-keeper",
+      "name": "漂流看守",
+      "description": "他说话永远慢半拍，但判断事情很准。",
+      "visualDescription": "为互动 Agent「漂流看守」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：不是所有事都要正面撞上去。 会划水的人，通常更懂什么时候该游。",
+      "placementHint": "中心约 54%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fish-keeper-interaction",
+          "name": "聊聊",
+          "description": "看守把你的今日行程折成纸船，顺水流走一半。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "f1sh-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "把电量留在值得的地方，不必被每件事都拖进深水区。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "宽松衣服、防水耳机、随时能漂走的拖鞋。"
+    },
+    "agents": [
+      "fish-keeper"
+    ],
+    "props": [
+      "fish-sofa",
+      "fish-buoy",
+      "fish-screen"
+    ]
+  }
+}

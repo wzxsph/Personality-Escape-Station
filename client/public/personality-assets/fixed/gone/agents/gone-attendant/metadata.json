@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342141463",
+  "name": "低压站务员",
+  "description": "低压站务员，一位说话比提示音还轻的站务员，擅长帮人悄悄离场。。一位说话比耳语还轻的站务员，相信所有人都有不告而别的权利，从不追问去向。。固定摆放坐标：地图舞台 40%, 70%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:49:29.950Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 1
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:49:30.086Z"
+  }
+}

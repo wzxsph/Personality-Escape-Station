@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342586265",
+  "name": "热场按钮",
+  "description": "热场按钮，按下去会释放一点恰到好处的离谱能量。。互动动作：点亮。固定摆放坐标：地图舞台 62%, 56%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:58:25.718Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:58:25.856Z"
+  }
+}

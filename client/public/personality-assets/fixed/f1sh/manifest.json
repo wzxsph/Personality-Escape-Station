@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "archetypeId": "F1SH",
+  "stage": {
+    "width": 900,
+    "height": 1600,
+    "tileSize": 20
+  },
+  "spawn": {
+    "x": 490,
+    "y": 1250
+  },
+  "map": {
+    "backgroundImage": "personality-assets/fixed/f1sh/map/background.png",
+    "tmjPath": "personality-assets/fixed/f1sh/map/map.tmj",
+    "walkableGridPath": "personality-assets/fixed/f1sh/map/walkable-grid.json",
+    "navigationTemplatePath": "personality-assets/fixed/f1sh/map/navigation-template.png",
+    "roomLayoutPath": "personality-assets/fixed/f1sh/map/room-layout.json",
+    "stylePackPath": "personality-assets/fixed/f1sh/map/style-pack.json",
+    "generationMode": "composite-v1"
+  },
+  "player": {
+    "promptPath": "personality-assets/fixed/f1sh/player/prompt.md",
+    "sprite": {
+      "sourceType": "frames",
+      "framesDir": "personality-assets/fixed/f1sh/player/frames",
+      "frameCount": 64,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "columns": 8,
+      "rows": 8,
+      "frameIndex": 0,
+      "scale": 0.58,
+      "layout": "player-8dir-8x8-v1",
+      "qualityStatus": {
+        "status": "passed",
+        "issues": [],
+        "checkedAt": "2026-07-06T13:50:36.262Z"
+      },
+      "animations": {
+        "walkDown": {
+          "start": 0,
+          "end": 7,
+          "frameRate": 10
+        },
+        "walkDownLeft": {
+          "start": 8,
+          "end": 15,
+          "frameRate": 10
+        },
+        "walkLeft": {
+          "start": 16,
+          "end": 23,
+          "frameRate": 10
+        },
+        "walkUpLeft": {
+          "start": 24,
+          "end": 31,
+          "frameRate": 10
+        },
+        "walkUp": {
+          "start": 32,
+          "end": 39,
+          "frameRate": 10
+        },
+        "walkUpRight": {
+          "start": 40,
+          "end": 47,
+          "frameRate": 10
+        },
+        "walkRight": {
+          "start": 48,
+          "end": 55,
+          "frameRate": 10
+        },
+        "walkDownRight": {
+          "start": 56,
+          "end": 63,
+          "frameRate": 10
+        },
+        "idleDown": 0,
+        "idleDownLeft": 8,
+        "idleLeft": 16,
+        "idleUpLeft": 24,
+        "idleUp": 32,
+        "idleUpRight": 40,
+        "idleRight": 48,
+        "idleDownRight": 56,
+        "idleFront": 0,
+        "idleBack": 32
+      }
+    }
+  },
+  "hotspots": [
+    {
+      "id": "fish-sofa",
+      "kind": "object",
+      "label": "摸鱼沙发",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/props/fish-sofa/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:04:24.838Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 220,
+        "y": 806,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "fish-buoy",
+      "kind": "object",
+      "label": "低电浮标",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/props/fish-buoy/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:04:46.610Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 580,
+        "y": 678,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "fish-screen",
+      "kind": "object",
+      "label": "气泡屏幕",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/props/fish-screen/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:05:09.258Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 418,
+        "y": 454,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "fish-keeper",
+      "kind": "npc",
+      "label": "漂流看守",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/agents/fish-keeper/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:05:41.201Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/f1sh/agents/fish-keeper/system-prompt.md",
+      "interactionBounds": {
+        "x": 431,
+        "y": 916,
+        "width": 110,
+        "height": 140
+      }
+    }
+  ],
+  "agents": {
+    "fish-keeper": {
+      "id": "fish-keeper",
+      "kind": "npc",
+      "label": "漂流看守",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/agents/fish-keeper/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:05:41.201Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/f1sh/agents/fish-keeper/system-prompt.md",
+      "interactionBounds": {
+        "x": 431,
+        "y": 916,
+        "width": 110,
+        "height": 140
+      }
+    }
+  },
+  "props": {
+    "fish-sofa": {
+      "id": "fish-sofa",
+      "kind": "object",
+      "label": "摸鱼沙发",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/props/fish-sofa/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:04:24.838Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 220,
+        "y": 806,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "fish-buoy": {
+      "id": "fish-buoy",
+      "kind": "object",
+      "label": "低电浮标",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/props/fish-buoy/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:04:46.610Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 580,
+        "y": 678,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "fish-screen": {
+      "id": "fish-screen",
+      "kind": "object",
+      "label": "气泡屏幕",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/f1sh/props/fish-screen/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:05:09.258Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 418,
+        "y": 454,
+        "width": 100,
+        "height": 90
+      }
+    }
+  },
+  "safeArea": {
+    "x": 72,
+    "y": 96,
+    "width": 756,
+    "height": 1376
+  },
+  "provenance": {
+    "pipeline": "personality-fixed-assets",
+    "runId": "2026-07-06T13-50-35",
+    "dryRun": false,
+    "generatedAt": "2026-07-06T13:50:36.063Z"
+  }
+}

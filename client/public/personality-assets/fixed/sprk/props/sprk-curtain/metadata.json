@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342705905",
+  "name": "火花幕布",
+  "description": "火花幕布，幕布后面藏着一整套“场面救援”方案。。互动动作：掀开。固定摆放坐标：地图舞台 74%, 42%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:59:49.072Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:59:49.229Z"
+  }
+}

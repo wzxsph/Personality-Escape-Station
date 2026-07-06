@@ -1,0 +1,39 @@
+{
+  "archetypeId": "UNDO",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo",
+  "startedAt": "2026-07-06T13:07:23.383Z",
+  "updatedAt": "2026-07-06T13:50:36.667Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo/map",
+      "updatedAt": "2026-07-06T13:50:36.478Z"
+    },
+    "hotspot:undo-button": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo/props/undo-button",
+      "updatedAt": "2026-07-06T13:11:07.470Z"
+    },
+    "hotspot:undo-chat": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo/props/undo-chat",
+      "updatedAt": "2026-07-06T13:11:07.470Z"
+    },
+    "hotspot:undo-eraser": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo/props/undo-eraser",
+      "updatedAt": "2026-07-06T13:11:07.470Z"
+    },
+    "hotspot:undo-clerk": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo/agents/undo-clerk",
+      "updatedAt": "2026-07-06T13:11:07.470Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/undo/player/frames",
+      "updatedAt": "2026-07-06T13:50:36.667Z"
+    }
+  }
+}

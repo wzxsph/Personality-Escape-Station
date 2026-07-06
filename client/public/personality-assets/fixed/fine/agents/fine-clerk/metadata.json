@@ -1,0 +1,28 @@
+{
+  "id": "char_1783344841892",
+  "name": "维修间接待员",
+  "description": "维修间接待员，她懂那种“表面稳定运行，内部已经报警”的感觉。。你已经够会撑了。 外壳可以继续整齐，里面也可以慢慢修。。固定摆放坐标：地图舞台 50%, 66%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:34:31.705Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:34:31.849Z"
+  }
+}

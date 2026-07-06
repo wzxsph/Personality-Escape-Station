@@ -1,0 +1,39 @@
+{
+  "archetypeId": "MUT8",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8",
+  "startedAt": "2026-07-06T13:10:45.636Z",
+  "updatedAt": "2026-07-06T13:50:36.869Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8/map",
+      "updatedAt": "2026-07-06T13:50:36.686Z"
+    },
+    "hotspot:mut8-mirror": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8/props/mut8-mirror",
+      "updatedAt": "2026-07-06T13:12:30.327Z"
+    },
+    "hotspot:mut8-switch": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8/props/mut8-switch",
+      "updatedAt": "2026-07-06T13:13:51.385Z"
+    },
+    "hotspot:mut8-core": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8/props/mut8-core",
+      "updatedAt": "2026-07-06T13:14:38.078Z"
+    },
+    "hotspot:mut8-tech": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8/agents/mut8-tech",
+      "updatedAt": "2026-07-06T13:15:09.705Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/mut8/player/frames",
+      "updatedAt": "2026-07-06T13:50:36.868Z"
+    }
+  }
+}

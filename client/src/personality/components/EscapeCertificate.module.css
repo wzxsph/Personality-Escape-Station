@@ -1,0 +1,132 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(5, 7, 13, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.certificate {
+  width: 100%;
+  max-width: 360px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 20px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, var(--panel) 0%, #0b0e16 100%);
+  background-size: 14px 14px, 14px 14px, auto;
+  border: 5px solid #05070d;
+  box-shadow:
+    8px 8px 0 #05070d,
+    inset 0 0 0 2px var(--space-primary, var(--accent)),
+    inset 0 0 20px rgba(244, 197, 66, 0.08);
+}
+
+.heading {
+  text-align: center;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--font-pixel);
+  color: var(--space-primary, var(--accent));
+  letter-spacing: 2px;
+}
+
+.worldName {
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.fragmentList {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #05070d;
+  background: var(--panel-strong);
+}
+
+.fragmentItem {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fragmentItem + .fragmentItem {
+  border-top: 1px solid var(--line);
+}
+
+.fragmentTitle {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-pixel);
+  color: var(--space-primary, var(--accent));
+}
+
+.fragmentContent {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.timestamp {
+  text-align: center;
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--font-pixel);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.shareBtn,
+.closeBtn {
+  flex: 1;
+  padding: 12px;
+  border: 3px solid #05070d;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-pixel);
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #05070d;
+  transition: transform 100ms ease, box-shadow 100ms ease;
+}
+
+.shareBtn {
+  background: var(--accent);
+  color: #05070d;
+}
+
+.closeBtn {
+  background: var(--panel-strong);
+  color: var(--text);
+}
+
+.shareBtn:active,
+.closeBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #05070d;
+}

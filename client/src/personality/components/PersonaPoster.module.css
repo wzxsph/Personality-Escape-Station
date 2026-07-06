@@ -1,0 +1,136 @@
+.poster {
+  --poster-primary: #f4c542;
+  --poster-secondary: #ffe6bd;
+  --poster-accent: #54d6bb;
+  --poster-soft: #10131d;
+  width: 390px;
+  min-height: 690px;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto auto;
+  gap: 12px;
+  padding: 14px;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--poster-soft) 84%, #171b28), #080a10);
+  background-size: 16px 16px, 16px 16px, auto;
+  border: 5px solid #05070d;
+  box-shadow: 8px 8px 0 #05070d;
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header {
+  color: var(--poster-accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.hero {
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #05070d;
+  background: var(--poster-soft);
+  box-shadow: 5px 5px 0 #05070d;
+}
+
+.sceneTag {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 10;
+  max-width: calc(100% - 20px);
+  padding: 7px 9px;
+  color: #05070d;
+  background: var(--poster-accent);
+  border: 3px solid #05070d;
+  box-shadow: 3px 3px 0 #05070d;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.identity {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 4px solid #05070d;
+  background: color-mix(in srgb, var(--poster-primary) 18%, #10131d);
+}
+
+.identity p,
+.identity h1,
+.identity strong,
+.line,
+.footer strong,
+.footer span {
+  margin: 0;
+}
+
+.identity p {
+  color: var(--poster-accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.identity h1 {
+  font-family: var(--font-pixel);
+  font-size: 34px;
+  line-height: 1.12;
+}
+
+.identity strong {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.line {
+  padding: 12px;
+  color: #05070d;
+  background: color-mix(in srgb, var(--poster-secondary) 80%, #ffffff);
+  border: 4px solid #05070d;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.42;
+}
+
+.footer {
+  align-items: end;
+}
+
+.footer div:first-child {
+  display: grid;
+  gap: 5px;
+}
+
+.footer strong {
+  color: var(--poster-accent);
+  font-size: 15px;
+}
+
+.footer span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.qr {
+  width: 94px;
+  height: 94px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  background: #ffffff;
+  border: 5px solid #05070d;
+}
+
+.qr canvas {
+  width: 78px;
+  height: 78px;
+}

@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "GONE",
+  "title": "离线中转站",
+  "mood": "雾灰色站台不断闪烁着“重新连接中”，但没有人催你上线。",
+  "personality": "此用户已注销",
+  "palette": {
+    "floor": "#b9d5d2",
+    "floorAlt": "#d6ebe6",
+    "blocked": "#111923",
+    "wall": "#243444",
+    "trim": "#6f929b",
+    "accent": "#f0b55f",
+    "glow": "#aee7ff",
+    "shadow": "#050a11"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342451619",
+  "name": "支线管理员",
+  "description": "支线管理员，他看起来永远知道哪条小路通往真正有趣的地方。。一个永远站在岔路口的管理员，手持一本无页码的支线目录，相信人生最精彩的部分都不在主线上。。固定摆放坐标：地图舞台 44%, 66%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:54:45.487Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:54:45.627Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "JANK",
+  "title": "现实质检局",
+  "mood": "整面白板写满现实漏洞，空气里全是“这个流程居然能上线”的清醒吐槽。",
+  "personality": "草台班子监察员",
+  "palette": {
+    "floor": "#c8d4c2",
+    "floorAlt": "#e0e8d8",
+    "blocked": "#151713",
+    "wall": "#34382e",
+    "trim": "#7f926f",
+    "accent": "#f0ad67",
+    "glow": "#e7ffa1",
+    "shadow": "#070906"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "SPRK",
+  "title": "火花排练场",
+  "mood": "场地还残留着热身音浪，灯光像刚把沉闷空气点亮。",
+  "personality": "纵火犯",
+  "palette": {
+    "floor": "#eed393",
+    "floorAlt": "#ffe3a5",
+    "blocked": "#18101b",
+    "wall": "#41203c",
+    "trim": "#a95d63",
+    "accent": "#ffcf4d",
+    "glow": "#ffe680",
+    "shadow": "#08050d"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

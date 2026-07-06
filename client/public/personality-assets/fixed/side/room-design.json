@@ -1,0 +1,128 @@
+{
+  "archetypeId": "SIDE",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 隐藏任务小巷 的竖屏人格空间地图。\n人格主题：支线剧情钉子户 / SIDE / Side-Quest Loyalist。\n空间氛围：每一块路牌都指向冷门入口，真正的主舞台藏在转角后面。\n关键词：岔路、隐藏入口、非主线空间、冷门彩蛋\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 52%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "从岔路里找到今天最值得你驻留的那一条。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "side-main-room",
+      "name": "隐藏任务小巷",
+      "description": "每一块路牌都指向冷门入口，真正的主舞台藏在转角后面。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "岔路告示牌 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "side-left-lane",
+      "name": "偏门",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 22%, 50%，尺寸约 16% x 22%",
+      "visualDescription": "偏门"
+    },
+    {
+      "id": "side-right-lane",
+      "name": "偏巷",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 78%, 52%，尺寸约 16% x 20%",
+      "visualDescription": "偏巷"
+    },
+    {
+      "id": "side-front-road",
+      "name": "石板路",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 11%",
+      "visualDescription": "石板路"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "side-map",
+      "name": "未标注地图",
+      "description": "地图上没写主线，只写了\"你可能会喜欢这里\"。",
+      "visualDescription": "为互动道具「未标注地图」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：地图上没写主线，只写了\"你可能会喜欢这里\"。",
+      "placementHint": "中心约 30%, 48%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "side-map-interaction",
+          "name": "展开",
+          "description": "一条新的小路自己亮了起来，像是在邀请你偏航。"
+        }
+      ]
+    },
+    {
+      "id": "side-well",
+      "name": "闪光井盖",
+      "description": "每隔几秒会亮一下，像在提示底下还有别的剧情。",
+      "visualDescription": "为互动道具「闪光井盖」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：每隔几秒会亮一下，像在提示底下还有别的剧情。",
+      "placementHint": "中心约 58%, 60%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "side-well-interaction",
+          "name": "敲一敲",
+          "description": "井盖发出清脆回音，支线任务计数 quietly +1。"
+        }
+      ]
+    },
+    {
+      "id": "side-booth",
+      "name": "冷门交换亭",
+      "description": "别人不要的碎片任务，会在这里变成稀有道具。",
+      "visualDescription": "为互动道具「冷门交换亭」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：别人不要的碎片任务，会在这里变成稀有道具。",
+      "placementHint": "中心约 72%, 42%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "side-booth-interaction",
+          "name": "翻找",
+          "description": "柜门轻响，一张\"主线暂缓券\"滑进你手里。"
+        }
+      ]
+    },
+    {
+      "id": "side-guide",
+      "name": "支线管理员",
+      "description": "他看起来永远知道哪条小路通往真正有趣的地方。",
+      "visualDescription": "为互动 Agent「支线管理员」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：一个永远站在岔路口的管理员，手持一本无页码的支线目录，相信人生最精彩的部分都不在主线上。",
+      "placementHint": "中心约 44%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "side-guide-interaction",
+          "name": "问路",
+          "description": "管理员冲你眨了眨眼，主线提示栏自动消失。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "side-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "从岔路里找到今天最值得你驻留的那一条。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "多口袋外套、奇怪徽章、随身小地图。"
+    },
+    "agents": [
+      "side-guide"
+    ],
+    "props": [
+      "side-map",
+      "side-well",
+      "side-booth"
+    ]
+  }
+}

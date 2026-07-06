@@ -1,0 +1,872 @@
+.page {
+  --space-primary: #f4c542;
+  --space-secondary: #ffe6bd;
+  --space-accent: #54d6bb;
+  --space-soft: #10131d;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: max(10px, env(safe-area-inset-top)) 10px max(10px, env(safe-area-inset-bottom));
+  color: var(--text);
+  background:
+    radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--space-secondary) 25%, transparent), transparent 24%),
+    radial-gradient(circle at 82% 10%, color-mix(in srgb, var(--space-accent) 20%, transparent), transparent 28%),
+    linear-gradient(180deg, color-mix(in srgb, var(--space-soft) 88%, #171b28), #06070b 80%);
+}
+
+.spaceShell {
+  width: min(100%, 430px);
+  min-height: calc(100svh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.emptyPanel {
+  width: min(100%, 430px);
+  display: grid;
+  gap: 16px;
+  margin: 20vh auto 0;
+  padding: 20px;
+  color: var(--text);
+  background: linear-gradient(180deg, #171b28, #0d1018);
+  border: 4px solid #05070d;
+  box-shadow: 8px 8px 0 #05070d;
+}
+
+.topBar,
+.footerBar,
+.consolePanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 3px solid #05070d;
+  background: rgba(13, 16, 24, 0.74);
+  box-shadow: 4px 4px 0 #05070d;
+  backdrop-filter: blur(10px);
+}
+
+.topBar div {
+  min-width: 0;
+}
+
+.topActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.eyebrow,
+.topBar h1,
+.topBar p,
+.emptyPanel h1,
+.emptyPanel p {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--space-accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.topBar h1,
+.emptyPanel h1 {
+  font-family: var(--font-pixel);
+  font-size: clamp(22px, 6.5vw, 36px);
+  line-height: 1.12;
+}
+
+.topBar p,
+.emptyPanel p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.room {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  padding: 8px;
+  background: color-mix(in srgb, var(--space-soft) 92%, #07090f);
+  border: 4px solid #05070d;
+  box-shadow: 6px 6px 0 #05070d;
+}
+
+.sceneHud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.sceneHud strong,
+.sceneHud span {
+  padding: 7px 8px;
+  border: 2px solid #05070d;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 3px 3px 0 #05070d;
+}
+
+.sceneHud strong {
+  color: #05070d;
+  background: var(--space-primary);
+}
+
+.stageViewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 3px solid #05070d;
+  background:
+    radial-gradient(circle at 20% 14%, color-mix(in srgb, var(--space-secondary) 38%, transparent), transparent 24%),
+    radial-gradient(circle at 80% 12%, color-mix(in srgb, var(--space-accent) 30%, transparent), transparent 24%),
+    linear-gradient(180deg, color-mix(in srgb, var(--space-soft) 72%, #1d2230), #080a10 78%);
+}
+
+.stage > div,
+.stage canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.stage canvas {
+  display: block;
+  image-rendering: pixelated;
+  touch-action: pan-y !important;
+}
+
+.stage[data-asset-mode='worldx'] {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 18, 0.14), rgba(7, 10, 18, 0.28)),
+    var(--worldx-background-image) center / cover no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--space-soft) 72%, #1d2230), #080a10 78%);
+}
+
+.stageGlow,
+.gridLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stageGlow {
+  background:
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.2)),
+    radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--space-primary) 26%, transparent), transparent 45%);
+  z-index: 1;
+}
+
+.gridLayer {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.36;
+  z-index: 2;
+}
+
+.stage[data-asset-mode='worldx'] .gridLayer {
+  opacity: 0.16;
+}
+
+.landmark,
+.decoration,
+.hotspot,
+.player,
+.proximityHint,
+.joystickDock,
+.actionDock {
+  position: absolute;
+}
+
+.landmark,
+.decoration {
+  transform: translate(-50%, -50%);
+  border: 3px solid #05070d;
+  box-shadow: 5px 5px 0 #05070d;
+  pointer-events: none;
+}
+
+.landmark {
+  z-index: 5;
+  background: color-mix(in srgb, var(--space-secondary) 72%, #ffffff);
+}
+
+.landmark span,
+.decoration span {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  max-width: calc(100% - 16px);
+  color: #05070d;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  opacity: 0.82;
+}
+
+.decoration {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.depthRear {
+  z-index: 3;
+  opacity: 0.58;
+}
+
+.depthMid {
+  z-index: 4;
+}
+
+.depthFront {
+  z-index: 8;
+  opacity: 0.76;
+}
+
+.shapePanel {
+  border-radius: 12px;
+}
+
+.shapeTower {
+  border-radius: 18px 18px 10px 10px;
+}
+
+.shapeArch {
+  border-radius: 22px 22px 10px 10px;
+}
+
+.shapePool {
+  border-radius: 999px;
+}
+
+.shapeNest {
+  border-radius: 26px;
+}
+
+.shapeConsole {
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.08), 5px 5px 0 #05070d;
+}
+
+.shapeBooth {
+  border-radius: 16px 16px 24px 24px;
+}
+
+.shapeBeam {
+  border-radius: 999px;
+}
+
+.shapePlatform {
+  border-radius: 14px;
+}
+
+.hotspot {
+  z-index: 10;
+  width: 74px;
+  min-height: 74px;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 8px 6px;
+  transform: translate(-50%, -50%);
+  color: var(--text);
+  border: 3px solid #05070d;
+  background: rgba(10, 12, 18, 0.86);
+  box-shadow: 4px 4px 0 #05070d;
+  cursor: pointer;
+}
+
+.hotspot[data-kind='npc'] {
+  border-radius: 18px;
+}
+
+.hotspot[data-kind='object'] {
+  border-radius: 12px;
+}
+
+.hotspot[data-accent='primary'] {
+  background: color-mix(in srgb, var(--space-primary) 34%, rgba(10, 12, 18, 0.92));
+}
+
+.hotspot[data-accent='secondary'] {
+  background: color-mix(in srgb, var(--space-secondary) 26%, rgba(10, 12, 18, 0.92));
+}
+
+.hotspot[data-accent='accent'] {
+  background: color-mix(in srgb, var(--space-accent) 26%, rgba(10, 12, 18, 0.92));
+}
+
+.hotspot[data-near='true'] {
+  outline: 3px solid var(--space-accent);
+  outline-offset: 3px;
+}
+
+.hotspot[data-active='true'] {
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+.hotspotIcon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: #05070d;
+  background: color-mix(in srgb, var(--space-accent) 70%, #ffffff);
+  border: 2px solid #05070d;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+}
+
+.hotspotSprite {
+  display: block;
+  transform-origin: center bottom;
+  filter: drop-shadow(2px 2px 0 #05070d);
+}
+
+.hotspot strong {
+  font-size: 11px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.player {
+  z-index: 12;
+  width: 44px;
+  height: 58px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.playerHalo,
+.playerHead,
+.playerBody,
+.playerShadow,
+.playerSprite {
+  position: absolute;
+}
+
+.playerHalo {
+  left: 7px;
+  right: 7px;
+  top: -8px;
+  height: 8px;
+  border: 3px solid var(--player-accent, var(--space-accent));
+  box-shadow: 0 0 0 3px #05070d, 0 0 18px var(--player-accent, var(--space-accent));
+}
+
+.playerHead {
+  left: 10px;
+  top: 8px;
+  width: 24px;
+  height: 22px;
+  border: 3px solid #05070d;
+  background: color-mix(in srgb, var(--space-primary) 74%, #ffffff);
+  box-shadow: 4px 4px 0 #05070d;
+}
+
+.playerBody {
+  left: 13px;
+  top: 30px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #05070d;
+  border-top: 0;
+  background: color-mix(in srgb, var(--space-secondary) 66%, #ffffff);
+}
+
+.playerShadow {
+  left: 6px;
+  right: 6px;
+  bottom: 0;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.playerSprite {
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  transform-origin: center bottom;
+  filter: drop-shadow(4px 4px 0 #05070d);
+}
+
+.proximityHint {
+  z-index: 13;
+  transform: translate(-50%, -100%);
+  padding: 6px 8px;
+  color: #05070d;
+  background: var(--space-accent);
+  border: 2px solid #05070d;
+  box-shadow: 3px 3px 0 #05070d;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.joystickDock {
+  left: 16px;
+  bottom: 16px;
+  z-index: 14;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.joystickDock span {
+  padding: 5px 7px;
+  color: var(--muted);
+  background: rgba(10, 12, 18, 0.78);
+  border: 2px solid #05070d;
+  font-size: 10px;
+}
+
+.joystick {
+  width: 96px;
+  height: 96px;
+  position: relative;
+  border-radius: 999px;
+  border: 3px solid #05070d;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 4px 4px 0 #05070d;
+  touch-action: none;
+}
+
+.joystickRing {
+  position: absolute;
+  inset: 16px;
+  border-radius: 999px;
+  border: 2px dashed rgba(255, 255, 255, 0.18);
+}
+
+.joystickKnob {
+  position: absolute;
+  left: 31px;
+  top: 31px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--space-primary);
+  border: 3px solid #05070d;
+  box-shadow: 3px 3px 0 #05070d;
+}
+
+.actionDock {
+  right: 12px;
+  bottom: 16px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actionButton,
+.secondaryButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 16px;
+  border-radius: 0;
+  border: 3px solid #05070d;
+  background: var(--space-primary, #f4c542);
+  color: #05070d;
+  cursor: pointer;
+  min-width: 140px;
+  box-shadow: 3px 3px 0 #05070d;
+}
+
+.actionButton strong,
+.secondaryButton strong {
+  font-size: 14px;
+  font-weight: 900;
+  color: #05070d;
+}
+
+.actionButton span,
+.secondaryButton span {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 2px;
+  color: #05070d;
+}
+
+
+
+.consolePanel {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.panelHeader p,
+.panelHeader h2,
+.panelSummary,
+.panelLines p {
+  margin: 0;
+}
+
+.panelHeader p {
+  color: var(--space-accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.panelHeader h2 {
+  font-family: var(--font-pixel);
+  font-size: clamp(18px, 4.2vw, 24px);
+  line-height: 1.18;
+}
+
+.panelHeader span {
+  padding: 6px 8px;
+  color: #05070d;
+  background: var(--space-primary);
+  border: 2px solid #05070d;
+  font-size: 11px;
+  font-weight: 900;
+  box-shadow: 3px 3px 0 #05070d;
+}
+
+.panelSummary {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.panelLines {
+  display: grid;
+  gap: 8px;
+}
+
+.panelLines p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.panelFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.sharePanel {
+  display: grid;
+  gap: 10px;
+  padding-top: 4px;
+  border-top: 2px dashed rgba(255, 255, 255, 0.12);
+}
+
+.shareQrCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border: 3px solid #05070d;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 4px 4px 0 #05070d;
+}
+
+.shareQrCode {
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background: #ffffff;
+  border: 3px solid #05070d;
+}
+
+.shareInfo {
+  display: grid;
+  gap: 6px;
+}
+
+.shareInfo strong {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.shareInfo span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.shareInfo code {
+  display: block;
+  overflow-wrap: anywhere;
+  padding: 8px;
+  color: var(--space-secondary);
+  background: rgba(5, 7, 13, 0.72);
+  border: 2px solid #05070d;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.shareActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.shareActions button {
+  min-height: 42px;
+  color: #05070d;
+  background: var(--space-accent);
+  border: 4px solid #05070d;
+  box-shadow: 4px 4px 0 #05070d;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.panelFooter span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.panelFooter button,
+.footerBar {
+  justify-content: center;
+}
+
+.footerBar button,
+.topBar button,
+.emptyPanel button,
+.panelFooter button {
+  min-height: 42px;
+  color: #05070d;
+  background: var(--space-primary);
+  border: 4px solid #05070d;
+}
+
+.footerMeta span {
+  padding: 6px 8px;
+  color: var(--muted);
+  border: 2px solid #05070d;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+}
+
+.footerBar button,
+.topBar button,
+.emptyPanel button {
+  min-height: 42px;
+  color: #05070d;
+  background: var(--space-primary);
+  border: 4px solid #05070d;
+  box-shadow: 4px 4px 0 #05070d;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.topBar button {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding-inline: 10px;
+  background: var(--space-accent);
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding-inline: 8px;
+  }
+
+  .spaceShell {
+    min-height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  .topBar,
+  .footerBar,
+  .consolePanel {
+    padding: 8px;
+  }
+
+  .topBar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .topActions {
+    justify-content: stretch;
+  }
+
+  .topActions button {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .actionDock {
+    min-width: 110px;
+  }
+
+  .hotspot {
+    width: 66px;
+    min-height: 66px;
+  }
+
+  .footerBar {
+    grid-template-columns: 1fr;
+  }
+
+  .shareQrCard {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+@media (max-height: 700px) {
+  .topBar h1 {
+    font-size: clamp(19px, 5.7vw, 28px);
+  }
+
+  .topBar p {
+    font-size: 11px;
+  }
+
+  .footerBar button,
+  .topBar button {
+    min-height: 38px;
+  }
+
+  .consolePanel {
+    gap: 8px;
+  }
+}
+
+/* 碎片入口按钮 - 右上角浮动 */
+.fragmentButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--space-primary);
+  border-radius: 20px;
+  padding: 8px 14px;
+  color: var(--space-primary);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fragmentButton:active {
+  transform: scale(0.95);
+}
+
+/* 碎片数量角标 */
+.fragmentBadge {
+  background: var(--space-accent);
+  color: #000;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* 世界任务弹出卡片 */
+.worldCardOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.worldCard {
+  width: min(88%, 340px);
+  max-height: 70%;
+  background: rgba(18, 18, 24, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+}
+
+.worldCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.worldCardHeader span {
+  color: var(--space-accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.worldCardHeader button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.worldCardTitle {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: clamp(16px, 4vw, 22px);
+  color: var(--text);
+}
+
+.worldCardDesc {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.worldCardLines {
+  display: grid;
+  gap: 6px;
+}
+
+.worldCardLines p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}

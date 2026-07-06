@@ -1,0 +1,128 @@
+{
+  "archetypeId": "FINE",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 体面维修间 的竖屏人格空间地图。\n人格主题：体面人 / FINE / Polished Fracture。\n空间氛围：每一块玻璃都擦得很干净，只有走近才看见里面细细的裂纹。\n关键词：体面、稳定外壳、裂纹、允许里面有故事\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "把“我还好”先放一放，允许自己在维修间里松开外壳。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "fine-main-room",
+      "name": "体面维修间",
+      "description": "每一块玻璃都擦得很干净，只有走近才看见里面细细的裂纹。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "体面维修台 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "fine-left-rack",
+      "name": "外套架",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 22%, 52%，尺寸约 14% x 20%",
+      "visualDescription": "外套架"
+    },
+    {
+      "id": "fine-right-mirror",
+      "name": "裂纹镜",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 80%, 34%，尺寸约 16% x 18%",
+      "visualDescription": "裂纹镜"
+    },
+    {
+      "id": "fine-front-floor",
+      "name": "整洁地面",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "整洁地面"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "fine-mirror",
+      "name": "裂纹镜子",
+      "description": "镜面依旧很亮，只是边角有几道只有你看得见的裂纹。",
+      "visualDescription": "为互动道具「裂纹镜子」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：镜面依旧很亮，只是边角有几道只有你看得见的裂纹。",
+      "placementHint": "中心约 32%, 52%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fine-mirror-interaction",
+          "name": "照照看",
+          "description": "镜中人仍然体面站着，但眼神终于肯松一点。"
+        }
+      ]
+    },
+    {
+      "id": "fine-rack",
+      "name": "熨好外套",
+      "description": "它挂得一丝不苟，像你总能在出门前把自己整理妥帖。",
+      "visualDescription": "为互动道具「熨好外套」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：它挂得一丝不苟，像你总能在出门前把自己整理妥帖。",
+      "placementHint": "中心约 68%, 54%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fine-rack-interaction",
+          "name": "整装",
+          "description": "你把衣角抚平，心里那一点塌陷也得到片刻支撑。"
+        }
+      ]
+    },
+    {
+      "id": "fine-mask",
+      "name": "微笑面具架",
+      "description": "架子上放着很多“我没事”的表情，但这里允许你先摘下来。",
+      "visualDescription": "为互动道具「微笑面具架」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：架子上放着很多“我没事”的表情，但这里允许你先摘下来。",
+      "placementHint": "中心约 52%, 32%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fine-mask-interaction",
+          "name": "放下",
+          "description": "面具被轻轻放回架上，你的肩膀也跟着松开了一点。"
+        }
+      ]
+    },
+    {
+      "id": "fine-clerk",
+      "name": "维修间接待员",
+      "description": "她懂那种“表面稳定运行，内部已经报警”的感觉。",
+      "visualDescription": "为互动 Agent「维修间接待员」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：你已经够会撑了。 外壳可以继续整齐，里面也可以慢慢修。",
+      "placementHint": "中心约 50%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "fine-clerk-interaction",
+          "name": "登记",
+          "description": "接待员递来一张休整单，默认你今天可以不用再证明自己没事。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "fine-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "把“我还好”先放一放，允许自己在维修间里松开外壳。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "干净外套、平整衣角、随时可以说还好的表情。"
+    },
+    "agents": [
+      "fine-clerk"
+    ],
+    "props": [
+      "fine-mirror",
+      "fine-rack",
+      "fine-mask"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "GL1T",
+  "title": "失真裂缝空间",
+  "mood": "空间像一段被故意保留下来的系统错误，边缘闪烁，中心却异常稳定。",
+  "personality": "异常漏码体",
+  "palette": {
+    "floor": "#bde2d9",
+    "floorAlt": "#e1fff7",
+    "blocked": "#0f1020",
+    "wall": "#2a2451",
+    "trim": "#5be0c7",
+    "accent": "#ff6bd8",
+    "glow": "#7dffe7",
+    "shadow": "#050512"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

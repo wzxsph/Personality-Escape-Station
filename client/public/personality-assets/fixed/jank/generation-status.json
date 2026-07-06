@@ -1,0 +1,39 @@
+{
+  "archetypeId": "JANK",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank",
+  "startedAt": "2026-07-06T13:23:49.172Z",
+  "updatedAt": "2026-07-06T13:50:37.268Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank/map",
+      "updatedAt": "2026-07-06T13:50:37.098Z"
+    },
+    "hotspot:jank-board": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank/props/jank-board",
+      "updatedAt": "2026-07-06T13:26:06.244Z"
+    },
+    "hotspot:jank-magnifier": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank/props/jank-magnifier",
+      "updatedAt": "2026-07-06T13:45:24.749Z"
+    },
+    "hotspot:jank-box": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank/props/jank-box",
+      "updatedAt": "2026-07-06T13:31:51.229Z"
+    },
+    "hotspot:jank-inspector": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank/agents/jank-inspector",
+      "updatedAt": "2026-07-06T13:32:24.912Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/jank/player/frames",
+      "updatedAt": "2026-07-06T13:50:37.268Z"
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "archetypeId": "FINE",
+  "stage": {
+    "width": 900,
+    "height": 1600,
+    "tileSize": 20
+  },
+  "spawn": {
+    "x": 450,
+    "y": 1250
+  },
+  "map": {
+    "backgroundImage": "personality-assets/fixed/fine/map/background.png",
+    "tmjPath": "personality-assets/fixed/fine/map/map.tmj",
+    "walkableGridPath": "personality-assets/fixed/fine/map/walkable-grid.json",
+    "navigationTemplatePath": "personality-assets/fixed/fine/map/navigation-template.png",
+    "roomLayoutPath": "personality-assets/fixed/fine/map/room-layout.json",
+    "stylePackPath": "personality-assets/fixed/fine/map/style-pack.json",
+    "generationMode": "composite-v1"
+  },
+  "player": {
+    "promptPath": "personality-assets/fixed/fine/player/prompt.md",
+    "sprite": {
+      "sourceType": "frames",
+      "framesDir": "personality-assets/fixed/fine/player/frames",
+      "frameCount": 64,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "columns": 8,
+      "rows": 8,
+      "frameIndex": 0,
+      "scale": 0.58,
+      "layout": "player-8dir-8x8-v1",
+      "qualityStatus": {
+        "status": "passed",
+        "issues": [],
+        "checkedAt": "2026-07-06T13:50:37.456Z"
+      },
+      "animations": {
+        "walkDown": {
+          "start": 0,
+          "end": 7,
+          "frameRate": 10
+        },
+        "walkDownLeft": {
+          "start": 8,
+          "end": 15,
+          "frameRate": 10
+        },
+        "walkLeft": {
+          "start": 16,
+          "end": 23,
+          "frameRate": 10
+        },
+        "walkUpLeft": {
+          "start": 24,
+          "end": 31,
+          "frameRate": 10
+        },
+        "walkUp": {
+          "start": 32,
+          "end": 39,
+          "frameRate": 10
+        },
+        "walkUpRight": {
+          "start": 40,
+          "end": 47,
+          "frameRate": 10
+        },
+        "walkRight": {
+          "start": 48,
+          "end": 55,
+          "frameRate": 10
+        },
+        "walkDownRight": {
+          "start": 56,
+          "end": 63,
+          "frameRate": 10
+        },
+        "idleDown": 0,
+        "idleDownLeft": 8,
+        "idleLeft": 16,
+        "idleUpLeft": 24,
+        "idleUp": 32,
+        "idleUpRight": 40,
+        "idleRight": 48,
+        "idleDownRight": 56,
+        "idleFront": 0,
+        "idleBack": 32
+      }
+    }
+  },
+  "hotspots": [
+    {
+      "id": "fine-mirror",
+      "kind": "object",
+      "label": "裂纹镜子",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/props/fine-mirror/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:33:04.079Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 238,
+        "y": 742,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "fine-rack",
+      "kind": "object",
+      "label": "熨好外套",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/props/fine-rack/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:33:26.434Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 562,
+        "y": 774,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "fine-mask",
+      "kind": "object",
+      "label": "微笑面具架",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/props/fine-mask/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:34:01.841Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 418,
+        "y": 422,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "fine-clerk",
+      "kind": "npc",
+      "label": "维修间接待员",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/agents/fine-clerk/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:34:31.849Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/fine/agents/fine-clerk/system-prompt.md",
+      "interactionBounds": {
+        "x": 395,
+        "y": 916,
+        "width": 110,
+        "height": 140
+      }
+    }
+  ],
+  "agents": {
+    "fine-clerk": {
+      "id": "fine-clerk",
+      "kind": "npc",
+      "label": "维修间接待员",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/agents/fine-clerk/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:34:31.849Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/fine/agents/fine-clerk/system-prompt.md",
+      "interactionBounds": {
+        "x": 395,
+        "y": 916,
+        "width": 110,
+        "height": 140
+      }
+    }
+  },
+  "props": {
+    "fine-mirror": {
+      "id": "fine-mirror",
+      "kind": "object",
+      "label": "裂纹镜子",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/props/fine-mirror/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:33:04.079Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 238,
+        "y": 742,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "fine-rack": {
+      "id": "fine-rack",
+      "kind": "object",
+      "label": "熨好外套",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/props/fine-rack/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:33:26.434Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 562,
+        "y": 774,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "fine-mask": {
+      "id": "fine-mask",
+      "kind": "object",
+      "label": "微笑面具架",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/fine/props/fine-mask/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T13:34:01.841Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 418,
+        "y": 422,
+        "width": 100,
+        "height": 90
+      }
+    }
+  },
+  "safeArea": {
+    "x": 72,
+    "y": 96,
+    "width": 756,
+    "height": 1376
+  },
+  "provenance": {
+    "pipeline": "personality-fixed-assets",
+    "runId": "2026-07-06T13-50-35",
+    "dryRun": false,
+    "generatedAt": "2026-07-06T13:50:37.268Z"
+  }
+}

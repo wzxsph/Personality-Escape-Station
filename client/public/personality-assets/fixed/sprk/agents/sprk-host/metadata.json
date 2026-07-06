@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342789272",
+  "name": "起哄主持人",
+  "description": "起哄主持人，一个永远能在尴尬时刻把局面接住的夜场居民。。你上吧，这种空气你最会救。 不用完美，只要先把火点着。。固定摆放坐标：地图舞台 48%, 66%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:01:15.081Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:01:15.222Z"
+  }
+}

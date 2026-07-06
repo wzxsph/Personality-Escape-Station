@@ -1,0 +1,34 @@
+{
+  "archetypeId": "GL1T",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gl1t",
+  "startedAt": "2026-07-06T13:34:31.857Z",
+  "updatedAt": "2026-07-06T13:50:37.665Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gl1t/map",
+      "updatedAt": "2026-07-06T13:50:37.475Z"
+    },
+    "hotspot:gl1t-sign": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gl1t/props/gl1t-sign",
+      "updatedAt": "2026-07-06T13:37:59.655Z"
+    },
+    "hotspot:gl1t-shadow": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gl1t/props/gl1t-shadow",
+      "updatedAt": "2026-07-06T13:38:35.784Z"
+    },
+    "hotspot:gl1t-coordinate": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gl1t/props/gl1t-coordinate",
+      "updatedAt": "2026-07-06T13:40:11.589Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/gl1t/player/frames",
+      "updatedAt": "2026-07-06T13:50:37.664Z"
+    }
+  }
+}

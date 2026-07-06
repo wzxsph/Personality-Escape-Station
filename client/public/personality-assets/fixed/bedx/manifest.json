@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "archetypeId": "BEDX",
+  "stage": {
+    "width": 900,
+    "height": 1600,
+    "tileSize": 20
+  },
+  "spawn": {
+    "x": 450,
+    "y": 1210
+  },
+  "map": {
+    "backgroundImage": "personality-assets/fixed/bedx/map/background.png",
+    "tmjPath": "personality-assets/fixed/bedx/map/map.tmj",
+    "walkableGridPath": "personality-assets/fixed/bedx/map/walkable-grid.json",
+    "navigationTemplatePath": "personality-assets/fixed/bedx/map/navigation-template.png",
+    "roomLayoutPath": "personality-assets/fixed/bedx/map/room-layout.json",
+    "stylePackPath": "personality-assets/fixed/bedx/map/style-pack.json",
+    "generationMode": "composite-v1"
+  },
+  "player": {
+    "promptPath": "personality-assets/fixed/bedx/player/prompt.md",
+    "sprite": {
+      "sourceType": "frames",
+      "framesDir": "personality-assets/fixed/bedx/player/frames",
+      "frameCount": 64,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "columns": 8,
+      "rows": 8,
+      "frameIndex": 0,
+      "scale": 0.58,
+      "layout": "player-8dir-8x8-v1",
+      "qualityStatus": {
+        "status": "passed",
+        "issues": [],
+        "checkedAt": "2026-07-06T13:50:35.452Z"
+      },
+      "animations": {
+        "walkDown": {
+          "start": 0,
+          "end": 7,
+          "frameRate": 10
+        },
+        "walkDownLeft": {
+          "start": 8,
+          "end": 15,
+          "frameRate": 10
+        },
+        "walkLeft": {
+          "start": 16,
+          "end": 23,
+          "frameRate": 10
+        },
+        "walkUpLeft": {
+          "start": 24,
+          "end": 31,
+          "frameRate": 10
+        },
+        "walkUp": {
+          "start": 32,
+          "end": 39,
+          "frameRate": 10
+        },
+        "walkUpRight": {
+          "start": 40,
+          "end": 47,
+          "frameRate": 10
+        },
+        "walkRight": {
+          "start": 48,
+          "end": 55,
+          "frameRate": 10
+        },
+        "walkDownRight": {
+          "start": 56,
+          "end": 63,
+          "frameRate": 10
+        },
+        "idleDown": 0,
+        "idleDownLeft": 8,
+        "idleLeft": 16,
+        "idleUpLeft": 24,
+        "idleUp": 32,
+        "idleUpRight": 40,
+        "idleRight": 48,
+        "idleDownRight": 56,
+        "idleFront": 0,
+        "idleBack": 32
+      }
+    }
+  },
+  "hotspots": [
+    {
+      "id": "bedx-do-not-disturb",
+      "kind": "object",
+      "label": "勿扰灯牌",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/props/bedx-do-not-disturb/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:23:14.854Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 166,
+        "y": 614,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "bedx-cocoa",
+      "kind": "object",
+      "label": "热可可机",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/props/bedx-cocoa/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:23:36.304Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 580,
+        "y": 806,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "bedx-pillow",
+      "kind": "object",
+      "label": "枕头结界",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/props/bedx-pillow/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:25:37.991Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 382,
+        "y": 486,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "bedx-ambassador-cat",
+      "kind": "npc",
+      "label": "值班领事猫",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/agents/bedx-ambassador-cat/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:26:24.419Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/bedx/agents/bedx-ambassador-cat/system-prompt.md",
+      "interactionBounds": {
+        "x": 467,
+        "y": 884,
+        "width": 110,
+        "height": 140
+      }
+    }
+  ],
+  "agents": {
+    "bedx-ambassador-cat": {
+      "id": "bedx-ambassador-cat",
+      "kind": "npc",
+      "label": "值班领事猫",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/agents/bedx-ambassador-cat/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:26:24.419Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/bedx/agents/bedx-ambassador-cat/system-prompt.md",
+      "interactionBounds": {
+        "x": 467,
+        "y": 884,
+        "width": 110,
+        "height": 140
+      }
+    }
+  },
+  "props": {
+    "bedx-do-not-disturb": {
+      "id": "bedx-do-not-disturb",
+      "kind": "object",
+      "label": "勿扰灯牌",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/props/bedx-do-not-disturb/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:23:14.854Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 166,
+        "y": 614,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "bedx-cocoa": {
+      "id": "bedx-cocoa",
+      "kind": "object",
+      "label": "热可可机",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/props/bedx-cocoa/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:23:36.304Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 580,
+        "y": 806,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "bedx-pillow": {
+      "id": "bedx-pillow",
+      "kind": "object",
+      "label": "枕头结界",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/bedx/props/bedx-pillow/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T07:25:37.991Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 382,
+        "y": 486,
+        "width": 100,
+        "height": 90
+      }
+    }
+  },
+  "safeArea": {
+    "x": 72,
+    "y": 96,
+    "width": 756,
+    "height": 1376
+  },
+  "provenance": {
+    "pipeline": "personality-fixed-assets",
+    "runId": "2026-07-06T13-50-35",
+    "dryRun": false,
+    "generatedAt": "2026-07-06T13:50:35.253Z"
+  }
+}

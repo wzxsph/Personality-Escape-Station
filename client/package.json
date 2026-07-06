@@ -1,0 +1,34 @@
+{
+  "name": "personality-escape-station-client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "verify-assets": "tsx scripts/verify-assets.ts",
+    "verify:fixed-assets": "tsx scripts/verify-assets.ts",
+    "verify:fixed-assets:strict": "tsx scripts/verify-assets.ts --strict-manifest",
+    "verify:fixed-asset": "tsx scripts/verify-assets.ts --strict-manifest --archetype",
+    "verify-content": "tsx scripts/verify-content.ts",
+    "verify-scoring": "tsx scripts/verify-scoring.ts",
+    "verify:personality": "npm run verify-content && npm run verify-scoring && npm run verify-assets"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.13",
+    "phaser": "^3.87.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.0",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.0"
+  }
+}

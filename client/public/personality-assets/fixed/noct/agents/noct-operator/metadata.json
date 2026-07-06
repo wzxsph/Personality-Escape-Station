@@ -1,0 +1,28 @@
+{
+  "id": "char_1783343218675",
+  "name": "夜班接线员",
+  "description": "夜班接线员，她只在深夜上班，负责接住那些白天被你压过去的情绪。。没关系，晚一点开口也算开口。 深夜不是退场，是另一个你上线。。固定摆放坐标：地图舞台 50%, 66%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:07:23.236Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 1
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:07:23.382Z"
+  }
+}

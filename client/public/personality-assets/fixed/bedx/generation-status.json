@@ -1,0 +1,39 @@
+{
+  "archetypeId": "BEDX",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx",
+  "startedAt": "2026-07-06T06:00:34.665Z",
+  "updatedAt": "2026-07-06T13:50:35.453Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx/map",
+      "updatedAt": "2026-07-06T13:50:35.280Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx/player/frames",
+      "updatedAt": "2026-07-06T13:50:35.452Z"
+    },
+    "hotspot:bedx-do-not-disturb": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx/props/bedx-do-not-disturb",
+      "updatedAt": "2026-07-06T13:11:07.391Z"
+    },
+    "hotspot:bedx-cocoa": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx/props/bedx-cocoa",
+      "updatedAt": "2026-07-06T13:11:07.391Z"
+    },
+    "hotspot:bedx-pillow": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx/props/bedx-pillow",
+      "updatedAt": "2026-07-06T13:11:07.391Z"
+    },
+    "hotspot:bedx-ambassador-cat": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bedx/agents/bedx-ambassador-cat",
+      "updatedAt": "2026-07-06T13:11:07.391Z"
+    }
+  }
+}

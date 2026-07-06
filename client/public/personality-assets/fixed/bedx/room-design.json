@@ -1,0 +1,128 @@
+{
+  "archetypeId": "BEDX",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 被窝领事馆 的竖屏人格空间地图。\n人格主题：被窝驻外大使 / BEDX / Blanket Embassy。\n空间氛围：昏黄夜灯把整个房间包起来，像一间永不完全醒来的驻外使馆。\n关键词：安全区、柔软封闭空间、慢恢复、低强度接触\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 76%；核心互动点不要贴边。",
+    "worldFunctionSummary": "靠近结界，给自己一段不用立刻解释的安静时间。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "bedx-main-room",
+      "name": "被窝领事馆",
+      "description": "昏黄夜灯把整个房间包起来，像一间永不完全醒来的驻外使馆。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "云层主床 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "bedx-rear-window",
+      "name": "夜灯窗",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 78%, 18%，尺寸约 18% x 14%",
+      "visualDescription": "夜灯窗"
+    },
+    {
+      "id": "bedx-left-cabinet",
+      "name": "安静柜",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 20%, 52%，尺寸约 18% x 18%",
+      "visualDescription": "安静柜"
+    },
+    {
+      "id": "bedx-front-rug",
+      "name": "绒毯",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 52%, 84%，尺寸约 52% x 10%",
+      "visualDescription": "绒毯"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "bedx-do-not-disturb",
+      "name": "勿扰灯牌",
+      "description": "一盏会替你挡掉待办事项的门牌灯。",
+      "visualDescription": "为互动道具「勿扰灯牌」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：一盏会替你挡掉待办事项的门牌灯。",
+      "placementHint": "中心约 24%, 44%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bedx-do-not-disturb-interaction",
+          "name": "挂起",
+          "description": "门牌亮起，系统自动把世界调成低打扰模式。"
+        }
+      ]
+    },
+    {
+      "id": "bedx-cocoa",
+      "name": "热可可机",
+      "description": "每次按下按钮，杯沿都会冒出一点能续命的热气。",
+      "visualDescription": "为互动道具「热可可机」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：每次按下按钮，杯沿都会冒出一点能续命的热气。",
+      "placementHint": "中心约 70%, 56%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bedx-cocoa-interaction",
+          "name": "续杯",
+          "description": "可可落进杯子，房间温度和你的呼吸都慢了半拍。"
+        }
+      ]
+    },
+    {
+      "id": "bedx-pillow",
+      "name": "枕头结界",
+      "description": "靠近之后，脑内通知会自动降噪。",
+      "visualDescription": "为互动道具「枕头结界」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：靠近之后，脑内通知会自动降噪。",
+      "placementHint": "中心约 48%, 36%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bedx-pillow-interaction",
+          "name": "窝进",
+          "description": "你被柔软边界轻轻包住，世界音量整体下调。"
+        }
+      ]
+    },
+    {
+      "id": "bedx-ambassador-cat",
+      "name": "值班领事猫",
+      "description": "它负责审核今晚有哪些人类焦虑不准入内。",
+      "visualDescription": "为互动 Agent「值班领事猫」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：一只拥有签证审批权的橘猫领事，用肢体语言办公，从不加班，永远站在你这边。",
+      "placementHint": "中心约 58%, 64%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bedx-ambassador-cat-interaction",
+          "name": "搭话",
+          "description": "猫尾轻轻一甩，默认帮你通过今晚的安全区签证。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "bedx-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "靠近结界，给自己一段不用立刻解释的安静时间。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "睡衣、毛袜、连帽毯，进馆自动静音。"
+    },
+    "agents": [
+      "bedx-ambassador-cat"
+    ],
+    "props": [
+      "bedx-do-not-disturb",
+      "bedx-cocoa",
+      "bedx-pillow"
+    ]
+  }
+}

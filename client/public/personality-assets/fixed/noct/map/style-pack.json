@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "NOCT",
+  "title": "深夜值班室",
+  "mood": "台灯照亮了最安静的一小块桌面，真正的你在深夜才肯出现。",
+  "personality": "守夜人",
+  "palette": {
+    "floor": "#bfc0d9",
+    "floorAlt": "#d8d9ec",
+    "blocked": "#111323",
+    "wall": "#232845",
+    "trim": "#646b9a",
+    "accent": "#e2a56b",
+    "glow": "#d6c5ff",
+    "shadow": "#050611"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

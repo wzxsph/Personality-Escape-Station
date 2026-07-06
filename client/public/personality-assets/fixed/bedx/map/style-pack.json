@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "BEDX",
+  "title": "被窝领事馆",
+  "mood": "昏黄夜灯把整个房间包起来，像一间永不完全醒来的驻外使馆。",
+  "personality": "被窝驻外大使",
+  "palette": {
+    "floor": "#6c5063",
+    "floorAlt": "#9b7180",
+    "blocked": "#100d19",
+    "wall": "#24182d",
+    "trim": "#d09a72",
+    "accent": "#f0bf8a",
+    "glow": "#ffd88a",
+    "shadow": "#06050d"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

@@ -1,0 +1,25 @@
+.wrap {
+  display: grid;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 11px;
+}
+
+.track {
+  height: 14px;
+  border: 3px solid #05070d;
+  background: #222638;
+  box-shadow: 4px 4px 0 #05070d;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 180ms ease;
+}

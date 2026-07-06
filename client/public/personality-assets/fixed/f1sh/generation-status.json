@@ -1,0 +1,39 @@
+{
+  "archetypeId": "F1SH",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh",
+  "startedAt": "2026-07-06T13:01:15.231Z",
+  "updatedAt": "2026-07-06T13:50:36.262Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh/map",
+      "updatedAt": "2026-07-06T13:50:36.075Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh/player/frames",
+      "updatedAt": "2026-07-06T13:50:36.262Z"
+    },
+    "hotspot:fish-sofa": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh/props/fish-sofa",
+      "updatedAt": "2026-07-06T13:11:07.446Z"
+    },
+    "hotspot:fish-buoy": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh/props/fish-buoy",
+      "updatedAt": "2026-07-06T13:11:07.447Z"
+    },
+    "hotspot:fish-screen": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh/props/fish-screen",
+      "updatedAt": "2026-07-06T13:11:07.447Z"
+    },
+    "hotspot:fish-keeper": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/f1sh/agents/fish-keeper",
+      "updatedAt": "2026-07-06T13:11:07.447Z"
+    }
+  }
+}

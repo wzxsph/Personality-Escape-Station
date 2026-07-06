@@ -1,0 +1,128 @@
+{
+  "archetypeId": "JANK",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 现实质检局 的竖屏人格空间地图。\n人格主题：草台班子监察员 / JANK / Reality QA。\n空间氛围：整面白板写满现实漏洞，空气里全是“这个流程居然能上线”的清醒吐槽。\n关键词：系统质检、流程漏洞、现实 debug、清醒吐槽\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "指出现实的漏洞，但别忘了把自己从故障流程里先拎出来。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "jank-main-room",
+      "name": "现实质检局",
+      "description": "整面白板写满现实漏洞，空气里全是“这个流程居然能上线”的清醒吐槽。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "Bug 白板墙 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "jank-left-case",
+      "name": "工单柜",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 20%, 54%，尺寸约 16% x 20%",
+      "visualDescription": "工单柜"
+    },
+    {
+      "id": "jank-right-screen",
+      "name": "复现屏",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 80%, 34%，尺寸约 18% x 14%",
+      "visualDescription": "复现屏"
+    },
+    {
+      "id": "jank-front-tape",
+      "name": "警示带",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "警示带"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "jank-board",
+      "name": "Bug 白板",
+      "description": "白板上写着今天现实系统最离谱的三个漏洞。",
+      "visualDescription": "为互动道具「Bug 白板」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：白板上写着今天现实系统最离谱的三个漏洞。",
+      "placementHint": "中心约 32%, 50%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "jank-board-interaction",
+          "name": "记录",
+          "description": "你又补上一条工整批注，逻辑突然顺了一点点。"
+        }
+      ]
+    },
+    {
+      "id": "jank-magnifier",
+      "name": "放大镜屏",
+      "description": "专门放大那些别人习以为常、你却一眼能看出有问题的地方。",
+      "visualDescription": "为互动道具「放大镜屏」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：专门放大那些别人习以为常、你却一眼能看出有问题的地方。",
+      "placementHint": "中心约 68%, 52%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "jank-magnifier-interaction",
+          "name": "复现",
+          "description": "屏幕自动圈出问题路径，现实的粗糙边缘被你一览无余。"
+        }
+      ]
+    },
+    {
+      "id": "jank-box",
+      "name": "投诉工单箱",
+      "description": "这里接收所有“这也太不合理了吧”的现实反馈。",
+      "visualDescription": "为互动道具「投诉工单箱」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：这里接收所有“这也太不合理了吧”的现实反馈。",
+      "placementHint": "中心约 52%, 32%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "jank-box-interaction",
+          "name": "提交",
+          "description": "工单箱吐出一张回执：已受理，至少你没有白白崩溃。"
+        }
+      ]
+    },
+    {
+      "id": "jank-inspector",
+      "name": "质检值班员",
+      "description": "他只对认真指出问题的人点头，因为这说明你还没有向荒诞投降。",
+      "visualDescription": "为互动 Agent「质检值班员」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：看到漏洞，不代表你难相处。 你只是比别人更早发现系统没调好。",
+      "placementHint": "中心约 50%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "jank-inspector-interaction",
+          "name": "交流",
+          "description": "值班员把高亮笔递给你，默认认可你这次的现实复现报告。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "jank-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "指出现实的漏洞，但别忘了把自己从故障流程里先拎出来。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "工牌、墨镜、手里必须有一支高亮笔。"
+    },
+    "agents": [
+      "jank-inspector"
+    ],
+    "props": [
+      "jank-board",
+      "jank-magnifier",
+      "jank-box"
+    ]
+  }
+}

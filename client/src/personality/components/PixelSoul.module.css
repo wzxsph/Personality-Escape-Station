@@ -1,0 +1,92 @@
+.wrap {
+  --soul-primary: #f4c542;
+  --soul-accent: #54d6bb;
+  width: 112px;
+  height: 132px;
+  position: relative;
+  margin: 0 auto;
+  image-rendering: pixelated;
+}
+
+.halo {
+  position: absolute;
+  inset: 6px 24px auto;
+  height: 14px;
+  border: 4px solid var(--soul-accent);
+  box-shadow: 0 0 0 4px #05070d, 0 0 22px var(--soul-accent);
+}
+
+.head {
+  position: absolute;
+  top: 30px;
+  left: 26px;
+  width: 60px;
+  height: 54px;
+  background: var(--soul-primary);
+  border: 4px solid #05070d;
+  box-shadow: 8px 8px 0 #05070d;
+}
+
+.head span {
+  position: absolute;
+  top: 20px;
+  width: 8px;
+  height: 8px;
+  background: #05070d;
+}
+
+.head span:first-child {
+  left: 16px;
+}
+
+.head span:last-child {
+  right: 16px;
+}
+
+.body {
+  position: absolute;
+  top: 78px;
+  left: 34px;
+  width: 44px;
+  height: 34px;
+  background: var(--soul-primary);
+  border: 4px solid #05070d;
+  border-top: 0;
+}
+
+.body::before,
+.body::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  width: 14px;
+  height: 18px;
+  background: var(--soul-primary);
+  border: 4px solid #05070d;
+  border-top: 0;
+}
+
+.body::before {
+  left: -4px;
+}
+
+.body::after {
+  right: -4px;
+}
+
+.shadow {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 0;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.wrap[data-mood='joy'] .head {
+  transform: rotate(-2deg);
+}
+
+.wrap[data-mood='cosmic'] .halo {
+  border-color: #d6ff61;
+}

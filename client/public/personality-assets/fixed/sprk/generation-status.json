@@ -1,0 +1,39 @@
+{
+  "archetypeId": "SPRK",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk",
+  "startedAt": "2026-07-06T12:54:45.636Z",
+  "updatedAt": "2026-07-06T13:50:36.056Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk/map",
+      "updatedAt": "2026-07-06T13:50:35.869Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk/player/frames",
+      "updatedAt": "2026-07-06T13:50:36.056Z"
+    },
+    "hotspot:sprk-mic": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk/props/sprk-mic",
+      "updatedAt": "2026-07-06T13:11:07.434Z"
+    },
+    "hotspot:sprk-button": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk/props/sprk-button",
+      "updatedAt": "2026-07-06T13:11:07.434Z"
+    },
+    "hotspot:sprk-curtain": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk/props/sprk-curtain",
+      "updatedAt": "2026-07-06T13:11:07.434Z"
+    },
+    "hotspot:sprk-host": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/sprk/agents/sprk-host",
+      "updatedAt": "2026-07-06T13:11:07.434Z"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "archetypeId": "BUFR",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 回血缓冲站 的竖屏人格空间地图。\n人格主题：缓冲中 / BUFR / Soft Buffer。\n空间氛围：进度条缓慢而稳定地向前爬，每一种疲惫都在这里被允许慢慢回血。\n关键词：缓冲、回血、慢修复、给情绪留降落区\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "允许自己慢下来，把续航一点点拼回来。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "bufr-main-room",
+      "name": "回血缓冲站",
+      "description": "进度条缓慢而稳定地向前爬，每一种疲惫都在这里被允许慢慢回血。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "回血主环 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "bufr-left-pad",
+      "name": "充电垫",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 24%, 54%，尺寸约 16% x 18%",
+      "visualDescription": "充电垫"
+    },
+    {
+      "id": "bufr-right-bar",
+      "name": "软进度条",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 78%, 34%，尺寸约 18% x 14%",
+      "visualDescription": "软进度条"
+    },
+    {
+      "id": "bufr-front-wave",
+      "name": "缓冲波",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "缓冲波"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "bufr-ring",
+      "name": "加载圆环",
+      "description": "圆环不会催你，它只负责温柔地显示“正在恢复”。",
+      "visualDescription": "为互动道具「加载圆环」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：圆环不会催你，它只负责温柔地显示“正在恢复”。",
+      "placementHint": "中心约 30%, 52%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bufr-ring-interaction",
+          "name": "查看",
+          "description": "圆环向前走了一格，像在告诉你慢一点也算进度。"
+        }
+      ]
+    },
+    {
+      "id": "bufr-pad",
+      "name": "充电垫",
+      "description": "站上去以后，体力和情绪会一起缓慢回升。",
+      "visualDescription": "为互动道具「充电垫」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：站上去以后，体力和情绪会一起缓慢回升。",
+      "placementHint": "中心约 66%, 56%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bufr-pad-interaction",
+          "name": "回血",
+          "description": "脚底微微发暖，你的状态条终于不是一片警报红了。"
+        }
+      ]
+    },
+    {
+      "id": "bufr-meter",
+      "name": "软软进度条",
+      "description": "它不会用“赶紧”来推进你，只会提醒你已经走到了哪里。",
+      "visualDescription": "为互动道具「软软进度条」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：它不会用“赶紧”来推进你，只会提醒你已经走到了哪里。",
+      "placementHint": "中心约 52%, 32%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bufr-meter-interaction",
+          "name": "同步",
+          "description": "进度条轻轻亮起，今天的恢复值被认真记录下来。"
+        }
+      ]
+    },
+    {
+      "id": "bufr-host",
+      "name": "回血站务员",
+      "description": "他熟悉所有“看起来没事，其实已经很累”的人类版本。",
+      "visualDescription": "为互动 Agent「回血站务员」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：不用证明你真的很累。 今天先回一点血，已经够用了。",
+      "placementHint": "中心约 50%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "bufr-host-interaction",
+          "name": "报修",
+          "description": "站务员默默把你的状态调到了“允许慢慢恢复”。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "bufr-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "允许自己慢下来，把续航一点点拼回来。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "舒服卫衣、软底鞋、不会压迫人的颜色。"
+    },
+    "agents": [
+      "bufr-host"
+    ],
+    "props": [
+      "bufr-ring",
+      "bufr-pad",
+      "bufr-meter"
+    ]
+  }
+}

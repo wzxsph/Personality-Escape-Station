@@ -1,0 +1,128 @@
+{
+  "archetypeId": "NOCT",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 深夜值班室 的竖屏人格空间地图。\n人格主题：守夜人 / NOCT / Night Watcher。\n空间氛围：台灯照亮了最安静的一小块桌面，真正的你在深夜才肯出现。\n关键词：深夜、台灯、草稿、白天配合世界夜里做自己\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 48%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "在夜色里把真正的自己一点点接回来。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "noct-main-room",
+      "name": "深夜值班室",
+      "description": "台灯照亮了最安静的一小块桌面，真正的你在深夜才肯出现。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "值班总桌 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "noct-window",
+      "name": "月光窗",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 80%, 20%，尺寸约 18% x 16%",
+      "visualDescription": "月光窗"
+    },
+    {
+      "id": "noct-shelf",
+      "name": "草稿架",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 18%, 48%，尺寸约 16% x 22%",
+      "visualDescription": "草稿架"
+    },
+    {
+      "id": "noct-floor",
+      "name": "夜纹地板",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "夜纹地板"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "noct-draft",
+      "name": "未发送草稿",
+      "description": "每一页都写着白天没来得及说出口的句子。",
+      "visualDescription": "为互动道具「未发送草稿」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：每一页都写着白天没来得及说出口的句子。",
+      "placementHint": "中心约 30%, 54%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "noct-draft-interaction",
+          "name": "翻阅",
+          "description": "纸页翻动的声音很轻，像夜里才敢出现的真实念头。"
+        }
+      ]
+    },
+    {
+      "id": "noct-lamp",
+      "name": "值班小灯",
+      "description": "它只照亮刚刚好的一圈，让你不用一次面对整个世界。",
+      "visualDescription": "为互动道具「值班小灯」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：它只照亮刚刚好的一圈，让你不用一次面对整个世界。",
+      "placementHint": "中心约 64%, 50%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "noct-lamp-interaction",
+          "name": "点亮",
+          "description": "灯光收拢下来，混乱思绪也跟着有了轮廓。"
+        }
+      ]
+    },
+    {
+      "id": "noct-window2",
+      "name": "月光窗",
+      "description": "窗外没有人催你，只有让人安心的夜色在流动。",
+      "visualDescription": "为互动道具「月光窗」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：窗外没有人催你，只有让人安心的夜色在流动。",
+      "placementHint": "中心约 74%, 30%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "noct-window2-interaction",
+          "name": "望一眼",
+          "description": "月光落进来，你紧绷的白天皮肤终于可以慢慢卸下。"
+        }
+      ]
+    },
+    {
+      "id": "noct-operator",
+      "name": "夜班接线员",
+      "description": "她只在深夜上班，负责接住那些白天被你压过去的情绪。",
+      "visualDescription": "为互动 Agent「夜班接线员」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：没关系，晚一点开口也算开口。 深夜不是退场，是另一个你上线。",
+      "placementHint": "中心约 50%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "noct-operator-interaction",
+          "name": "接通",
+          "description": "接线员把耳机一戴，示意你今晚可以慢慢说。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "noct-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "在夜色里把真正的自己一点点接回来。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "柔软外套、耳机、只给深夜开放的眼神。"
+    },
+    "agents": [
+      "noct-operator"
+    ],
+    "props": [
+      "noct-draft",
+      "noct-lamp",
+      "noct-window2"
+    ]
+  }
+}

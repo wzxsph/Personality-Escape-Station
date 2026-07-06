@@ -1,0 +1,128 @@
+{
+  "archetypeId": "GONE",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 离线中转站 的竖屏人格空间地图。\n人格主题：此用户已注销 / GONE / Offline Apparition。\n空间氛围：雾灰色站台不断闪烁着“重新连接中”，但没有人催你上线。\n关键词：断联、空旷、半离线感、低信号中转\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 46%, 74%；核心互动点不要贴边。",
+    "worldFunctionSummary": "从在线列表里暂时蒸发，给连接数回一口气。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "gone-main-room",
+      "name": "离线中转站",
+      "description": "雾灰色站台不断闪烁着“重新连接中”，但没有人催你上线。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "离线站台 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "gone-signal",
+      "name": "失联天线",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 82%, 20%，尺寸约 12% x 18%",
+      "visualDescription": "失联天线"
+    },
+    {
+      "id": "gone-board",
+      "name": "注销板",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 18%, 32%，尺寸约 14% x 12%",
+      "visualDescription": "注销板"
+    },
+    {
+      "id": "gone-lane",
+      "name": "灰色通道",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 82%，尺寸约 56% x 12%",
+      "visualDescription": "灰色通道"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "gone-mailbox",
+      "name": "离线邮箱",
+      "description": "只有真正想你的人，才会把消息投到这里。",
+      "visualDescription": "为互动道具「离线邮箱」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：只有真正想你的人，才会把消息投到这里。",
+      "placementHint": "中心约 18%, 60%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gone-mailbox-interaction",
+          "name": "查看",
+          "description": "箱门弹开，只剩几条不带催促的问候。"
+        }
+      ]
+    },
+    {
+      "id": "gone-window",
+      "name": "注销窗口",
+      "description": "可以临时把你从所有\"在线列表\"里摘出去。",
+      "visualDescription": "为互动道具「注销窗口」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：可以临时把你从所有\"在线列表\"里摘出去。",
+      "placementHint": "中心约 82%, 56%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gone-window-interaction",
+          "name": "下线",
+          "description": "窗口回收了你的绿色小圆点，只留下安静的灰色头像。"
+        }
+      ]
+    },
+    {
+      "id": "gone-signal-bar",
+      "name": "无信号塔",
+      "description": "塔顶红灯一闪一闪，提醒世界你现在不在服务区。",
+      "visualDescription": "为互动道具「无信号塔」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：塔顶红灯一闪一闪，提醒世界你现在不在服务区。",
+      "placementHint": "中心约 76%, 24%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gone-signal-bar-interaction",
+          "name": "确认",
+          "description": "信号格彻底归零，嘈杂感也一起熄火。"
+        }
+      ]
+    },
+    {
+      "id": "gone-attendant",
+      "name": "低压站务员",
+      "description": "一位说话比提示音还轻的站务员，擅长帮人悄悄离场。",
+      "visualDescription": "为互动 Agent「低压站务员」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：一位说话比耳语还轻的站务员，相信所有人都有不告而别的权利，从不追问去向。",
+      "placementHint": "中心约 40%, 70%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gone-attendant-interaction",
+          "name": "请教",
+          "description": "她替你把出口灯调暗了一点，方便你不被任何人注意到。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "gone-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "从在线列表里暂时蒸发，给连接数回一口气。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "低调卫衣、隐身斗篷，头像自动灰掉。"
+    },
+    "agents": [
+      "gone-attendant"
+    ],
+    "props": [
+      "gone-mailbox",
+      "gone-window",
+      "gone-signal-bar"
+    ]
+  }
+}

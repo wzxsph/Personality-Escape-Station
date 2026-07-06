@@ -1,0 +1,28 @@
+{
+  "id": "char_1783342214333",
+  "name": "未标注地图",
+  "description": "未标注地图，地图上没写主线，只写了\"你可能会喜欢这里\"。。互动动作：展开。固定摆放坐标：地图舞台 30%, 48%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T12:50:35.832Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T12:50:35.986Z"
+  }
+}

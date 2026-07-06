@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "archetypeId": "SIDE",
+  "stage": {
+    "width": 900,
+    "height": 1600,
+    "tileSize": 20
+  },
+  "spawn": {
+    "x": 470,
+    "y": 1250
+  },
+  "map": {
+    "backgroundImage": "personality-assets/fixed/side/map/background.png",
+    "tmjPath": "personality-assets/fixed/side/map/map.tmj",
+    "walkableGridPath": "personality-assets/fixed/side/map/walkable-grid.json",
+    "navigationTemplatePath": "personality-assets/fixed/side/map/navigation-template.png",
+    "roomLayoutPath": "personality-assets/fixed/side/map/room-layout.json",
+    "stylePackPath": "personality-assets/fixed/side/map/style-pack.json",
+    "generationMode": "composite-v1"
+  },
+  "player": {
+    "promptPath": "personality-assets/fixed/side/player/prompt.md",
+    "sprite": {
+      "sourceType": "frames",
+      "framesDir": "personality-assets/fixed/side/player/frames",
+      "frameCount": 64,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "columns": 8,
+      "rows": 8,
+      "frameIndex": 0,
+      "scale": 0.58,
+      "layout": "player-8dir-8x8-v1",
+      "qualityStatus": {
+        "status": "passed",
+        "issues": [],
+        "checkedAt": "2026-07-06T13:50:35.849Z"
+      },
+      "animations": {
+        "walkDown": {
+          "start": 0,
+          "end": 7,
+          "frameRate": 10
+        },
+        "walkDownLeft": {
+          "start": 8,
+          "end": 15,
+          "frameRate": 10
+        },
+        "walkLeft": {
+          "start": 16,
+          "end": 23,
+          "frameRate": 10
+        },
+        "walkUpLeft": {
+          "start": 24,
+          "end": 31,
+          "frameRate": 10
+        },
+        "walkUp": {
+          "start": 32,
+          "end": 39,
+          "frameRate": 10
+        },
+        "walkUpRight": {
+          "start": 40,
+          "end": 47,
+          "frameRate": 10
+        },
+        "walkRight": {
+          "start": 48,
+          "end": 55,
+          "frameRate": 10
+        },
+        "walkDownRight": {
+          "start": 56,
+          "end": 63,
+          "frameRate": 10
+        },
+        "idleDown": 0,
+        "idleDownLeft": 8,
+        "idleLeft": 16,
+        "idleUpLeft": 24,
+        "idleUp": 32,
+        "idleUpRight": 40,
+        "idleRight": 48,
+        "idleDownRight": 56,
+        "idleFront": 0,
+        "idleBack": 32
+      }
+    }
+  },
+  "hotspots": [
+    {
+      "id": "side-map",
+      "kind": "object",
+      "label": "未标注地图",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/props/side-map/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:50:35.986Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 220,
+        "y": 678,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "side-well",
+      "kind": "object",
+      "label": "闪光井盖",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/props/side-well/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:50:58.594Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 472,
+        "y": 870,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "side-booth",
+      "kind": "object",
+      "label": "冷门交换亭",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/props/side-booth/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:54:11.578Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 598,
+        "y": 582,
+        "width": 100,
+        "height": 90
+      }
+    },
+    {
+      "id": "side-guide",
+      "kind": "npc",
+      "label": "支线管理员",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/agents/side-guide/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:54:45.627Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/side/agents/side-guide/system-prompt.md",
+      "interactionBounds": {
+        "x": 341,
+        "y": 916,
+        "width": 110,
+        "height": 140
+      }
+    }
+  ],
+  "agents": {
+    "side-guide": {
+      "id": "side-guide",
+      "kind": "npc",
+      "label": "支线管理员",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/agents/side-guide/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.32,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:54:45.627Z"
+        }
+      },
+      "systemPromptPath": "personality-assets/fixed/side/agents/side-guide/system-prompt.md",
+      "interactionBounds": {
+        "x": 341,
+        "y": 916,
+        "width": 110,
+        "height": 140
+      }
+    }
+  },
+  "props": {
+    "side-map": {
+      "id": "side-map",
+      "kind": "object",
+      "label": "未标注地图",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/props/side-map/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:50:35.986Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 220,
+        "y": 678,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "side-well": {
+      "id": "side-well",
+      "kind": "object",
+      "label": "闪光井盖",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/props/side-well/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:50:58.594Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 472,
+        "y": 870,
+        "width": 100,
+        "height": 90
+      }
+    },
+    "side-booth": {
+      "id": "side-booth",
+      "kind": "object",
+      "label": "冷门交换亭",
+      "sprite": {
+        "sourceType": "image",
+        "imagePath": "personality-assets/fixed/side/props/side-booth/image.png",
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "columns": 1,
+        "rows": 1,
+        "frameCount": 1,
+        "frameIndex": 0,
+        "scale": 0.25,
+        "layout": "single-image-v1",
+        "qualityStatus": {
+          "status": "passed",
+          "issues": [],
+          "checkedAt": "2026-07-06T12:54:11.578Z"
+        }
+      },
+      "interactionBounds": {
+        "x": 598,
+        "y": 582,
+        "width": 100,
+        "height": 90
+      }
+    }
+  },
+  "safeArea": {
+    "x": 72,
+    "y": 96,
+    "width": 756,
+    "height": 1376
+  },
+  "provenance": {
+    "pipeline": "personality-fixed-assets",
+    "runId": "2026-07-06T13-50-35",
+    "dryRun": false,
+    "generatedAt": "2026-07-06T13:50:35.657Z"
+  }
+}

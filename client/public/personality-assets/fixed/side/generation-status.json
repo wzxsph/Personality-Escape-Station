@@ -1,0 +1,39 @@
+{
+  "archetypeId": "SIDE",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side",
+  "startedAt": "2026-07-06T12:49:30.095Z",
+  "updatedAt": "2026-07-06T13:50:35.850Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side/map",
+      "updatedAt": "2026-07-06T13:50:35.669Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side/player/frames",
+      "updatedAt": "2026-07-06T13:50:35.850Z"
+    },
+    "hotspot:side-map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side/props/side-map",
+      "updatedAt": "2026-07-06T13:11:07.421Z"
+    },
+    "hotspot:side-well": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side/props/side-well",
+      "updatedAt": "2026-07-06T13:11:07.421Z"
+    },
+    "hotspot:side-booth": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side/props/side-booth",
+      "updatedAt": "2026-07-06T13:11:07.421Z"
+    },
+    "hotspot:side-guide": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/side/agents/side-guide",
+      "updatedAt": "2026-07-06T13:11:07.421Z"
+    }
+  }
+}

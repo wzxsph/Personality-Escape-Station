@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "FINE",
+  "title": "体面维修间",
+  "mood": "每一块玻璃都擦得很干净，只有走近才看见里面细细的裂纹。",
+  "personality": "体面人",
+  "palette": {
+    "floor": "#d7c7d0",
+    "floorAlt": "#eadce4",
+    "blocked": "#17121a",
+    "wall": "#3b2d3b",
+    "trim": "#9a728b",
+    "accent": "#f2b6cf",
+    "glow": "#ffd5e6",
+    "shadow": "#08050a"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

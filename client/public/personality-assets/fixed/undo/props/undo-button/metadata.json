@@ -1,0 +1,28 @@
+{
+  "id": "char_1783343243908",
+  "name": "撤回按钮",
+  "description": "撤回按钮，按下去会把刚刚那一幕变成一条可编辑记录。。互动动作：撤回。固定摆放坐标：地图舞台 30%, 52%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:08:25.605Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:08:25.753Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "SIDE",
+  "title": "隐藏任务小巷",
+  "mood": "每一块路牌都指向冷门入口，真正的主舞台藏在转角后面。",
+  "personality": "支线剧情钉子户",
+  "palette": {
+    "floor": "#c9c4df",
+    "floorAlt": "#ded9f0",
+    "blocked": "#171427",
+    "wall": "#302955",
+    "trim": "#7d70a7",
+    "accent": "#f2a2c4",
+    "glow": "#e8c8ff",
+    "shadow": "#080712"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "char_1783322616356",
+  "name": "枕头结界",
+  "description": "枕头结界，靠近之后，脑内通知会自动降噪。。互动动作：窝进",
+  "createdAt": "2026-07-06T07:25:37.834Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T07:25:37.991Z"
+  }
+}

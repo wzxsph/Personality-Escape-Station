@@ -1,0 +1,39 @@
+{
+  "archetypeId": "NOCT",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct",
+  "startedAt": "2026-07-06T13:05:41.209Z",
+  "updatedAt": "2026-07-06T13:50:36.457Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct/map",
+      "updatedAt": "2026-07-06T13:50:36.275Z"
+    },
+    "hotspot:noct-draft": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct/props/noct-draft",
+      "updatedAt": "2026-07-06T13:11:07.458Z"
+    },
+    "hotspot:noct-lamp": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct/props/noct-lamp",
+      "updatedAt": "2026-07-06T13:11:07.458Z"
+    },
+    "hotspot:noct-window2": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct/props/noct-window2",
+      "updatedAt": "2026-07-06T13:11:07.458Z"
+    },
+    "hotspot:noct-operator": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct/agents/noct-operator",
+      "updatedAt": "2026-07-06T13:11:07.458Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/noct/player/frames",
+      "updatedAt": "2026-07-06T13:50:36.456Z"
+    }
+  }
+}

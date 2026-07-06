@@ -1,0 +1,39 @@
+{
+  "archetypeId": "BUFR",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr",
+  "startedAt": "2026-07-06T13:15:09.713Z",
+  "updatedAt": "2026-07-06T13:50:37.076Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr/map",
+      "updatedAt": "2026-07-06T13:50:36.888Z"
+    },
+    "hotspot:bufr-ring": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr/props/bufr-ring",
+      "updatedAt": "2026-07-06T13:18:14.694Z"
+    },
+    "hotspot:bufr-pad": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr/props/bufr-pad",
+      "updatedAt": "2026-07-06T13:18:58.579Z"
+    },
+    "hotspot:bufr-meter": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr/props/bufr-meter",
+      "updatedAt": "2026-07-06T13:40:54.604Z"
+    },
+    "hotspot:bufr-host": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr/agents/bufr-host",
+      "updatedAt": "2026-07-06T13:43:26.466Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/bufr/player/frames",
+      "updatedAt": "2026-07-06T13:50:37.075Z"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "char_1783343678124",
+  "name": "舱内技师",
+  "description": "舱内技师，他专门处理“看起来像失控，其实是在自救”的状态切换。。别怕，现在只是变形，不是坏掉。 形态切换本来就是你的求生机制。。固定摆放坐标：地图舞台 52%, 66%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:15:09.544Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:15:09.704Z"
+  }
+}

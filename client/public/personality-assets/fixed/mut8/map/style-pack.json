@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "MUT8",
+  "title": "过载变形舱",
+  "mood": "舱壁轻微震动，提醒你这里允许压力过载后换一种形态继续活。",
+  "personality": "变异体",
+  "palette": {
+    "floor": "#b5d3c0",
+    "floorAlt": "#d2ead8",
+    "blocked": "#10181b",
+    "wall": "#243f3a",
+    "trim": "#6aa47f",
+    "accent": "#ff8fd0",
+    "glow": "#b8ffcf",
+    "shadow": "#050b0c"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

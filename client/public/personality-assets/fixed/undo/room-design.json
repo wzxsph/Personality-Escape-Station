@@ -1,0 +1,128 @@
+{
+  "archetypeId": "UNDO",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 时间回收站 的竖屏人格空间地图。\n人格主题：此消息已撤回 / UNDO / Timeline Reviser。\n空间氛围：每条走廊都像刚刚倒带过，一切失误都还有机会被轻轻接住。\n关键词：撤回、倒带、重写、修补尴尬时间线\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "把今天最卡住的一幕收进回收站，别让它循环整晚。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "undo-main-room",
+      "name": "时间回收站",
+      "description": "每条走廊都像刚刚倒带过，一切失误都还有机会被轻轻接住。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "重写档案柜 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "undo-left-bin",
+      "name": "回收槽",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 22%, 52%，尺寸约 16% x 20%",
+      "visualDescription": "回收槽"
+    },
+    {
+      "id": "undo-right-screen",
+      "name": "倒带屏",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 80%, 32%，尺寸约 18% x 14%",
+      "visualDescription": "倒带屏"
+    },
+    {
+      "id": "undo-front-line",
+      "name": "时间线",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "时间线"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "undo-button",
+      "name": "撤回按钮",
+      "description": "按下去会把刚刚那一幕变成一条可编辑记录。",
+      "visualDescription": "为互动道具「撤回按钮」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：按下去会把刚刚那一幕变成一条可编辑记录。",
+      "placementHint": "中心约 30%, 52%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "undo-button-interaction",
+          "name": "撤回",
+          "description": "时间轴闪了一下，尴尬值从满格降回了可处理区。"
+        }
+      ]
+    },
+    {
+      "id": "undo-chat",
+      "name": "碎裂聊天框",
+      "description": "这里堆着所有发出去之后想立刻收回的句子。",
+      "visualDescription": "为互动道具「碎裂聊天框」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：这里堆着所有发出去之后想立刻收回的句子。",
+      "placementHint": "中心约 68%, 52%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "undo-chat-interaction",
+          "name": "修补",
+          "description": "裂开的对话气泡被你一块块拼回可说出口的样子。"
+        }
+      ]
+    },
+    {
+      "id": "undo-eraser",
+      "name": "重录橡皮",
+      "description": "专门擦掉“我怎么会这样说”的后劲。",
+      "visualDescription": "为互动道具「重录橡皮」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：专门擦掉“我怎么会这样说”的后劲。",
+      "placementHint": "中心约 52%, 32%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "undo-eraser-interaction",
+          "name": "重录",
+          "description": "回音被一点点擦平，只留下还能继续生活的版本。"
+        }
+      ]
+    },
+    {
+      "id": "undo-clerk",
+      "name": "时间修补师",
+      "description": "他负责给每个想撤回的人留一条重新开口的时间线。",
+      "visualDescription": "为互动 Agent「时间修补师」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：没有人能永远说对，但很多错误都还来得及被安放。 你不用把自己困在刚刚那一幕里。",
+      "placementHint": "中心约 50%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "undo-clerk-interaction",
+          "name": "咨询",
+          "description": "修补师递给你一张“今天可以先到这里”的小票。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "undo-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "把今天最卡住的一幕收进回收站，别让它循环整晚。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "整洁衬衫、备用草稿、随身删除键。"
+    },
+    "agents": [
+      "undo-clerk"
+    ],
+    "props": [
+      "undo-button",
+      "undo-chat",
+      "undo-eraser"
+    ]
+  }
+}

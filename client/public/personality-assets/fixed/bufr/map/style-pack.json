@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "BUFR",
+  "title": "回血缓冲站",
+  "mood": "进度条缓慢而稳定地向前爬，每一种疲惫都在这里被允许慢慢回血。",
+  "personality": "缓冲中",
+  "palette": {
+    "floor": "#d7c8a8",
+    "floorAlt": "#eadcbd",
+    "blocked": "#14151d",
+    "wall": "#303044",
+    "trim": "#857a9c",
+    "accent": "#f5c66d",
+    "glow": "#fff0a8",
+    "shadow": "#070812"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "archetypeId": "GL1T",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 失真裂缝空间 的竖屏人格空间地图。\n人格主题：异常漏码体 / GL1T / Glitch Leak。\n空间氛围：空间像一段被故意保留下来的系统错误，边缘闪烁，中心却异常稳定。\n关键词：故障、失真、裂缝、无法归类但稳定存在\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 76%；核心互动点不要贴边。",
+    "worldFunctionSummary": "在失真空间里保留你的异常版本，不必再随机降落进别人的世界。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "gl1t-main-room",
+      "name": "失真裂缝空间",
+      "description": "空间像一段被故意保留下来的系统错误，边缘闪烁，中心却异常稳定。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "裂缝主核 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "gl1t-left-crack",
+      "name": "错码裂纹",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 22%, 48%，尺寸约 16% x 22%",
+      "visualDescription": "错码裂纹"
+    },
+    {
+      "id": "gl1t-right-offset",
+      "name": "偏移投影",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 78%, 44%，尺寸约 16% x 20%",
+      "visualDescription": "偏移投影"
+    },
+    {
+      "id": "gl1t-floor-noise",
+      "name": "扫描噪点",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 60% x 10%",
+      "visualDescription": "扫描噪点"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "gl1t-sign",
+      "name": "乱码门牌",
+      "description": "门牌不断变换编号，像系统始终无法给你一个稳定分类。",
+      "visualDescription": "为互动道具「乱码门牌」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：门牌不断变换编号，像系统始终无法给你一个稳定分类。",
+      "placementHint": "中心约 24%, 56%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gl1t-sign-interaction",
+          "name": "识别",
+          "description": "门牌闪烁了一下，最后只留下一个仍在加载中的访客代号。"
+        }
+      ]
+    },
+    {
+      "id": "gl1t-shadow",
+      "name": "错位影子",
+      "description": "影子总比你慢半拍，却意外地比现实更诚实。",
+      "visualDescription": "为互动道具「错位影子」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：影子总比你慢半拍，却意外地比现实更诚实。",
+      "placementHint": "中心约 72%, 54%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gl1t-shadow-interaction",
+          "name": "对齐",
+          "description": "影子与身体短暂重合，空间噪点反而安静了一瞬。"
+        }
+      ]
+    },
+    {
+      "id": "gl1t-coordinate",
+      "name": "闪烁坐标",
+      "description": "坐标点不断偏移，像在提醒你这里不是常规世界的逻辑。",
+      "visualDescription": "为互动道具「闪烁坐标」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：坐标点不断偏移，像在提醒你这里不是常规世界的逻辑。",
+      "placementHint": "中心约 50%, 30%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "gl1t-coordinate-interaction",
+          "name": "校准",
+          "description": "坐标忽然稳定下来，像是默许你在裂缝里继续存在。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "gl1t-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "在失真空间里保留你的异常版本，不必再随机降落进别人的世界。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "不对称配饰、错位影子、任何看起来像加载失败的东西。"
+    },
+    "agents": [],
+    "props": [
+      "gl1t-sign",
+      "gl1t-shadow",
+      "gl1t-coordinate"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "char_1783343305805",
+  "name": "碎裂聊天框",
+  "description": "碎裂聊天框，这里堆着所有发出去之后想立刻收回的句子。。互动动作：修补。固定摆放坐标：地图舞台 68%, 52%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:08:48.977Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 1
+    }
+  },
+  "kind": "prop",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:08:49.149Z"
+  }
+}

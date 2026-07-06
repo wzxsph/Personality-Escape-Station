@@ -1,0 +1,128 @@
+{
+  "archetypeId": "MUT8",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 过载变形舱 的竖屏人格空间地图。\n人格主题：变异体 / MUT8 / Overload Shifter。\n空间氛围：舱壁轻微震动，提醒你这里允许压力过载后换一种形态继续活。\n关键词：过载、形态切换、警报、临界值之后的自救\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 48%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "别急着把自己调回默认模式，先让过载状态安全落地。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "mut8-main-room",
+      "name": "过载变形舱",
+      "description": "舱壁轻微震动，提醒你这里允许压力过载后换一种形态继续活。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "变形主舱 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "mut8-left-alarm",
+      "name": "警报灯",
+      "description": "rear decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 20%, 28%，尺寸约 16% x 14%",
+      "visualDescription": "警报灯"
+    },
+    {
+      "id": "mut8-right-console",
+      "name": "冷却台",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 80%, 54%，尺寸约 18% x 18%",
+      "visualDescription": "冷却台"
+    },
+    {
+      "id": "mut8-floor",
+      "name": "导流槽",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 58% x 10%",
+      "visualDescription": "导流槽"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "mut8-mirror",
+      "name": "故障镜子",
+      "description": "镜子里会闪过你不同状态的轮廓，每一个都是真的。",
+      "visualDescription": "为互动道具「故障镜子」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：镜子里会闪过你不同状态的轮廓，每一个都是真的。",
+      "placementHint": "中心约 30%, 50%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "mut8-mirror-interaction",
+          "name": "照一照",
+          "description": "镜面抖了一下，另一个形态从边缘短暂显形。"
+        }
+      ]
+    },
+    {
+      "id": "mut8-switch",
+      "name": "二形态开关",
+      "description": "不是失控按钮，是让你暂时切换生存形态的保险装置。",
+      "visualDescription": "为互动道具「二形态开关」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：不是失控按钮，是让你暂时切换生存形态的保险装置。",
+      "placementHint": "中心约 64%, 52%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "mut8-switch-interaction",
+          "name": "切换",
+          "description": "开关弹起，舱内光线由冷转热，你的姿态也立刻不一样了。"
+        }
+      ]
+    },
+    {
+      "id": "mut8-core",
+      "name": "冷却核心",
+      "description": "核心负责在极限之后把你慢慢带回可运转区。",
+      "visualDescription": "为互动道具「冷却核心」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：核心负责在极限之后把你慢慢带回可运转区。",
+      "placementHint": "中心约 50%, 32%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "mut8-core-interaction",
+          "name": "降温",
+          "description": "警报频率降了下来，过载边缘终于松开一点。"
+        }
+      ]
+    },
+    {
+      "id": "mut8-tech",
+      "name": "舱内技师",
+      "description": "他专门处理“看起来像失控，其实是在自救”的状态切换。",
+      "visualDescription": "为互动 Agent「舱内技师」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：别怕，现在只是变形，不是坏掉。 形态切换本来就是你的求生机制。",
+      "placementHint": "中心约 52%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "mut8-tech-interaction",
+          "name": "校准",
+          "description": "技师替你把警报阈值调高一点，让你不必对每次过载都感到羞愧。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "mut8-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "别急着把自己调回默认模式，先让过载状态安全落地。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "机能外套、故障饰品、随时切换状态的鞋。"
+    },
+    "agents": [
+      "mut8-tech"
+    ],
+    "props": [
+      "mut8-mirror",
+      "mut8-switch",
+      "mut8-core"
+    ]
+  }
+}

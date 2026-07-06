@@ -1,0 +1,23 @@
+{
+  "version": "style-pack-composite-v1",
+  "archetypeId": "UNDO",
+  "title": "时间回收站",
+  "mood": "每条走廊都像刚刚倒带过，一切失误都还有机会被轻轻接住。",
+  "personality": "此消息已撤回",
+  "palette": {
+    "floor": "#d9d0bf",
+    "floorAlt": "#eee5d4",
+    "blocked": "#17171a",
+    "wall": "#383638",
+    "trim": "#8f8580",
+    "accent": "#8fc7ff",
+    "glow": "#cfe9ff",
+    "shadow": "#070708"
+  },
+  "compositor": {
+    "floorPattern": "quiet-carpet-noise",
+    "edgeTrim": "stitched-stone-border",
+    "lighting": "warm-vignette-and-hotspot-glow",
+    "aiRole": "AI generates small replaceable style textures/landmarks in future revisions; layout and collision stay deterministic."
+  }
+}

@@ -1,0 +1,340 @@
+.page {
+  min-height: 100svh;
+  display: grid;
+  place-items: start center;
+  padding: 10px 12px 18px;
+}
+
+.result,
+.emptyState {
+  width: min(100%, 430px);
+  display: grid;
+  gap: 10px;
+}
+
+.emptyState {
+  margin-top: 20vh;
+  padding: 20px;
+  border: 4px solid #05070d;
+  background: linear-gradient(180deg, #171b28, #0d1018);
+  box-shadow: 8px 8px 0 #05070d;
+}
+
+.emptyState h1,
+.emptyState p {
+  margin: 0;
+}
+
+.emptyState button {
+  min-height: 50px;
+  color: #05070d;
+  background: var(--accent);
+  border: 4px solid #05070d;
+  box-shadow: 4px 4px 0 #05070d;
+  font-weight: 900;
+}
+
+.resultCard {
+  --scene-primary: #f4c542;
+  --scene-accent: #54d6bb;
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, #171b28, #0d1018);
+  background-size: 14px 14px, 14px 14px, auto;
+  border: 4px solid #05070d;
+  box-shadow: 7px 7px 0 #05070d;
+}
+
+.captureLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: start center;
+  padding: 14px;
+  overflow: auto;
+  pointer-events: none;
+  background: rgba(5, 7, 13, 0.9);
+}
+
+.posterCapture {
+  width: 390px;
+  max-width: none;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.cardHeader {
+  color: var(--scene-accent, var(--accent));
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.cardStage {
+  min-height: 190px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 3px solid #05070d;
+  background:
+    radial-gradient(circle at 26% 18%, color-mix(in srgb, var(--scene-primary) 55%, transparent), transparent 25%),
+    radial-gradient(circle at 78% 35%, color-mix(in srgb, var(--scene-accent) 45%, transparent), transparent 20%),
+    linear-gradient(180deg, color-mix(in srgb, var(--scene-primary) 24%, #10131d), #0a0d14);
+}
+
+.roomBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  max-width: calc(100% - 16px);
+  padding: 6px 8px;
+  color: #05070d;
+  background: var(--scene-accent, var(--accent));
+  border: 3px solid #05070d;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 3px 3px 0 #05070d;
+}
+
+.identityBlock {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+  border: 3px solid #05070d;
+  background: color-mix(in srgb, var(--scene-primary) 18%, #10131d);
+}
+
+.identityBlock p,
+.identityBlock h1,
+.identityBlock strong,
+.quote,
+.status {
+  margin: 0;
+}
+
+.identityBlock p {
+  color: var(--scene-accent, var(--accent));
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.identityBlock h1 {
+  font-family: var(--font-pixel);
+  font-size: clamp(23px, 7.6vw, 34px);
+  line-height: 1.14;
+}
+
+.identityBlock strong {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.quote {
+  padding: 10px;
+  color: #05070d;
+  background: color-mix(in srgb, var(--scene-primary) 72%, #fff);
+  border: 3px solid #05070d;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.quickStory {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 3px solid #05070d;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.quickStory span {
+  color: var(--scene-accent, var(--accent));
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.quickStory p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.matchStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.matchStrip span {
+  padding: 7px 9px;
+  color: #05070d;
+  background: var(--scene-accent, var(--accent));
+  border: 3px solid #05070d;
+  box-shadow: 3px 3px 0 #05070d;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.primaryActions {
+  display: grid;
+  gap: 8px;
+}
+
+.primaryAction,
+.spaceAction {
+  color: #05070d;
+  border: 4px solid #05070d;
+  box-shadow: 4px 4px 0 #05070d;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.primaryAction,
+.spaceAction {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  min-height: 58px;
+  padding: 9px 12px;
+  text-align: left;
+}
+
+.primaryAction {
+  background: var(--scene-primary, var(--accent));
+}
+
+.spaceAction {
+  background: var(--scene-accent, var(--accent));
+}
+
+.primaryAction strong,
+.spaceAction strong {
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+.primaryAction span,
+.spaceAction span {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.primaryAction:disabled {
+  color: #747987;
+  background: #252a37;
+  cursor: not-allowed;
+}
+
+.status {
+  color: var(--muted);
+  line-height: 1.55;
+  text-align: center;
+}
+
+.previewOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(5, 7, 13, 0.82);
+}
+
+.previewPanel {
+  width: min(100%, 390px);
+  max-height: calc(100svh - 36px);
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  overflow: auto;
+  color: var(--text);
+  background: #151823;
+  border: 4px solid #05070d;
+  box-shadow: 8px 8px 0 #05070d;
+}
+
+.previewPanel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid #05070d;
+}
+
+.previewPanel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  text-align: center;
+}
+
+.previewActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.previewActions button {
+  min-height: 46px;
+  color: #05070d;
+  background: var(--scene-accent, var(--accent));
+  border: 4px solid #05070d;
+  font-weight: 900;
+}
+
+@media (max-height: 680px) {
+  .page {
+    padding-top: 6px;
+  }
+
+  .resultCard {
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .cardStage {
+    min-height: 170px;
+  }
+
+  .quote {
+    font-size: 14px;
+  }
+
+  .cardStage {
+    min-height: 160px;
+  }
+
+  .quote,
+  .quickStory {
+    padding: 8px;
+  }
+
+  .quickStory p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .primaryAction,
+  .spaceAction {
+    min-height: 52px;
+    padding: 8px 10px;
+  }
+
+  .primaryAction strong,
+  .spaceAction strong {
+    font-size: 15px;
+  }
+
+}

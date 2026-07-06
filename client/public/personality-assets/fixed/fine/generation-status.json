@@ -1,0 +1,39 @@
+{
+  "archetypeId": "FINE",
+  "runId": "2026-07-06T13-50-35",
+  "outputDir": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine",
+  "startedAt": "2026-07-06T13:32:24.920Z",
+  "updatedAt": "2026-07-06T13:50:37.457Z",
+  "assets": {
+    "map": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine/map",
+      "updatedAt": "2026-07-06T13:50:37.281Z"
+    },
+    "hotspot:fine-mirror": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine/props/fine-mirror",
+      "updatedAt": "2026-07-06T13:33:04.080Z"
+    },
+    "hotspot:fine-rack": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine/props/fine-rack",
+      "updatedAt": "2026-07-06T13:33:26.434Z"
+    },
+    "hotspot:fine-mask": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine/props/fine-mask",
+      "updatedAt": "2026-07-06T13:34:01.841Z"
+    },
+    "hotspot:fine-clerk": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine/agents/fine-clerk",
+      "updatedAt": "2026-07-06T13:34:31.849Z"
+    },
+    "player": {
+      "status": "completed",
+      "path": "/home/samsong/Desktop/maybe/WorldX/client/public/personality-assets/fixed/fine/player/frames",
+      "updatedAt": "2026-07-06T13:50:37.456Z"
+    }
+  }
+}

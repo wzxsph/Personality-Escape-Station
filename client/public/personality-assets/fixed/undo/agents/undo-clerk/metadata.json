@@ -1,0 +1,28 @@
+{
+  "id": "char_1783343363430",
+  "name": "时间修补师",
+  "description": "时间修补师，他负责给每个想撤回的人留一条重新开口的时间线。。没有人能永远说对，但很多错误都还来得及被安放。 你不用把自己困在刚刚那一幕里。。固定摆放坐标：地图舞台 50%, 66%，sprite 底部中心落在该点。",
+  "createdAt": "2026-07-06T13:10:45.471Z",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 1,
+  "rows": 1,
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "detected": true,
+  "animations": {
+    "idle-front": {
+      "frame": 0
+    }
+  },
+  "kind": "agent",
+  "sourceType": "image",
+  "layout": "single-image-v1",
+  "frameCount": 1,
+  "frameIndex": 0,
+  "qualityStatus": {
+    "status": "passed",
+    "issues": [],
+    "checkedAt": "2026-07-06T13:10:45.634Z"
+  }
+}

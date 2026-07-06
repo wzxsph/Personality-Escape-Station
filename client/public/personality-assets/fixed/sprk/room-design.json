@@ -1,0 +1,128 @@
+{
+  "archetypeId": "SPRK",
+  "mapAspectRatio": "9:16",
+  "mapDescription": "为「人格出逃空间站 / Personality Escape Station」生成 火花排练场 的竖屏人格空间地图。\n人格主题：纵火犯 / SPRK / Spark Starter。\n空间氛围：场地还残留着热身音浪，灯光像刚把沉闷空气点亮。\n关键词：热闹、临时聚集、能量外放、把局面烧亮\n画面必须是 9:16 竖屏、俯视游戏地图、无文字、无角色、主路径宽而连续，互动点位于安全区。\n地图生成会附带固定导航模板：浅色区域就是最终可行走地面，深色区域就是墙体/家具/不可走背景。请让最终地图的地面形状服从模板，不要让家具盖住模板地面。\n互动 Agent 和重点道具会作为独立 sprite 叠加；地图只需要自然的地面留白、家具旁空位或地毯边缘，不要画出 Agent/道具本体。\n绝对不要画 dashed boxes、dashed circles、selection outlines、target reticles、UI markers、coordinate dots、placeholder frames、bounding boxes、虚线框、虚线圆、十字准星、坐标点、图例或编辑器选区。",
+  "mapPlan": {
+    "buildingMode": "personality_room",
+    "compositionNotes": "900x1600 竖屏构图；出生点约在 50%, 78%；核心互动点不要贴边。",
+    "worldFunctionSummary": "让场子重新流动起来，但保留一点只属于你的火花。",
+    "regionDesignNotes": "以固定导航模板为准，保留一张宽阔、连续、简单的主地面网络：出生点、中心区域和每个互动点之间必须像整块地毯或宽走廊一样连通，不要被碎石/花丛/阴影切碎。"
+  },
+  "regions": [
+    {
+      "id": "sprk-main-room",
+      "name": "火花排练场",
+      "description": "场地还残留着热身音浪，灯光像刚把沉闷空气点亮。",
+      "type": "area",
+      "enterable": true,
+      "placementHint": "占据竖屏中央安全区",
+      "visualDescription": "中央热场台 作为视觉中心，但必须待在模板深色区域或浅色地面边缘，不能遮盖主可走地面。"
+    },
+    {
+      "id": "sprk-left-speaker",
+      "name": "扩音组",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 18%, 48%，尺寸约 16% x 24%",
+      "visualDescription": "扩音组"
+    },
+    {
+      "id": "sprk-right-booth",
+      "name": "灯控席",
+      "description": "mid decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 82%, 46%，尺寸约 16% x 22%",
+      "visualDescription": "灯控席"
+    },
+    {
+      "id": "sprk-front-lights",
+      "name": "灯带",
+      "description": "front decoration",
+      "type": "area",
+      "enterable": false,
+      "placementHint": "中心约 50%, 84%，尺寸约 60% x 10%",
+      "visualDescription": "灯带"
+    }
+  ],
+  "interactiveElements": [
+    {
+      "id": "sprk-mic",
+      "name": "失控麦克风",
+      "description": "只要你拿起来，整个场子就会自动升温两度。",
+      "visualDescription": "为互动道具「失控麦克风」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：只要你拿起来，整个场子就会自动升温两度。",
+      "placementHint": "中心约 34%, 48%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "sprk-mic-interaction",
+          "name": "热场",
+          "description": "掌声采样被点亮，空气不再僵着。"
+        }
+      ]
+    },
+    {
+      "id": "sprk-button",
+      "name": "热场按钮",
+      "description": "按下去会释放一点恰到好处的离谱能量。",
+      "visualDescription": "为互动道具「热场按钮」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：按下去会释放一点恰到好处的离谱能量。",
+      "placementHint": "中心约 62%, 56%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "sprk-button-interaction",
+          "name": "点亮",
+          "description": "灯带一圈圈亮起来，场内氛围终于开始流动。"
+        }
+      ]
+    },
+    {
+      "id": "sprk-curtain",
+      "name": "火花幕布",
+      "description": "幕布后面藏着一整套“场面救援”方案。",
+      "visualDescription": "为互动道具「火花幕布」附近预留自然地面留白、家具旁空地或地毯边缘；不要画出可独立叠加的道具本体，也不要画任何框/圆/光标标记。道具语义：幕布后面藏着一整套“场面救援”方案。",
+      "placementHint": "中心约 74%, 42%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "sprk-curtain-interaction",
+          "name": "掀开",
+          "description": "幕布抖了一下，里面的光像在给你预热上场。"
+        }
+      ]
+    },
+    {
+      "id": "sprk-host",
+      "name": "起哄主持人",
+      "description": "一个永远能在尴尬时刻把局面接住的夜场居民。",
+      "visualDescription": "为互动 Agent「起哄主持人」附近预留自然地面留白、座位旁空地或灯光下的可停靠区域；不要画出 Agent 身体本体，也不要画任何框/圆/光标标记。Agent 气质：你上吧，这种空气你最会救。 不用完美，只要先把火点着。",
+      "placementHint": "中心约 48%, 66%，必须贴近宽主路且可从出生点到达；只能用自然空地表达位置，不允许可见定位标记。",
+      "interactions": [
+        {
+          "id": "sprk-host-interaction",
+          "name": "接梗",
+          "description": "主持人冲你比了个“上”的手势，默认把舞台主光打给你。"
+        }
+      ]
+    }
+  ],
+  "worldActions": [
+    {
+      "id": "sprk-collect-fragments",
+      "name": "收集人格碎片",
+      "description": "让场子重新流动起来，但保留一点只属于你的火花。"
+    }
+  ],
+  "assetPlan": {
+    "player": {
+      "role": "人格出逃空间站主角",
+      "dressCode": "亮色夹克、离谱帽子、随时可以上台的表情。"
+    },
+    "agents": [
+      "sprk-host"
+    ],
+    "props": [
+      "sprk-mic",
+      "sprk-button",
+      "sprk-curtain"
+    ]
+  }
+}

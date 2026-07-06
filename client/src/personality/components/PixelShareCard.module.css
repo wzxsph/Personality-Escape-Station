@@ -1,0 +1,142 @@
+.card {
+  --card-primary: #f4c542;
+  --card-secondary: #ffe6bd;
+  --card-accent: #54d6bb;
+  --card-soft: #10131d;
+  width: min(100%, 340px);
+  min-height: 560px;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  color: #fff8ef;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--card-soft) 86%, #000), #08090f);
+  background-size: 14px 14px, 14px 14px, auto;
+  border: 5px solid #05070d;
+  box-shadow: 8px 8px 0 #05070d;
+  font-family: var(--font-sans);
+}
+
+.header,
+.sceneRow,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header {
+  color: var(--card-accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+.stage {
+  position: relative;
+  min-height: 158px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 4px solid #05070d;
+  background:
+    radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--card-primary) 62%, transparent), transparent 22%),
+    radial-gradient(circle at 76% 38%, color-mix(in srgb, var(--card-accent) 52%, transparent), transparent 20%),
+    linear-gradient(180deg, color-mix(in srgb, var(--card-primary) 28%, #10131d), #0b0e16);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 24px, rgba(255, 255, 255, 0.11) 24px 28px),
+    linear-gradient(transparent 0 18px, rgba(255, 255, 255, 0.1) 18px 22px);
+  background-size: 48px 48px, 42px 42px;
+  opacity: 0.55;
+}
+
+.identity {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+  border: 4px solid #05070d;
+  background: color-mix(in srgb, var(--card-primary) 22%, #10131d);
+}
+
+.identity p,
+.identity h2,
+.identity strong,
+.signature,
+.footer span {
+  margin: 0;
+}
+
+.identity p {
+  color: var(--card-accent);
+  font-family: var(--font-pixel);
+  font-size: 11px;
+}
+
+.identity h2 {
+  font-family: var(--font-pixel);
+  font-size: 26px;
+  line-height: 1.22;
+}
+
+.identity strong {
+  color: var(--card-secondary);
+  font-size: 13px;
+}
+
+.signature {
+  padding: 14px;
+  color: #05070d;
+  background: var(--card-secondary);
+  border: 4px solid #05070d;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.sceneRow span {
+  flex: 1;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  color: #05070d;
+  background: var(--card-accent);
+  border: 3px solid #05070d;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.footer {
+  align-items: end;
+  margin-top: auto;
+}
+
+.footer span {
+  flex: 1;
+  color: #d7dce8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.qrSlot {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  color: #05070d;
+  background: #fff;
+  border: 4px solid #05070d;
+}
+
+.qrSlot svg {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
