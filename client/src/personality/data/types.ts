@@ -144,6 +144,7 @@ export interface HotspotDialogueTask {
   hintPlaceholder: string
   responses: DialogueResponse[]
   fallbackResponse: string
+  completionRound?: number
   maxRounds: number
   taskDescription: string
 }

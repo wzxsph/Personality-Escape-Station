@@ -3,8 +3,9 @@ import type { HotspotDialogueTask } from '../data/types'
 export interface DialogueResult {
   response: string
   isComplete: boolean
-  isMaxRound: boolean
 }
+
+const defaultCompletionRound = 4
 
 /**
  * 匹配用户输入，返回Agent回复
@@ -31,8 +32,15 @@ export function matchResponse(
       return {
         response: resp.response,
         isComplete: resp.isTaskComplete ?? false,
-        isMaxRound: currentRound >= task.maxRounds,
       }
+    }
+  }
+
+  const completionRound = task.completionRound ?? defaultCompletionRound
+  if (currentRound >= completionRound) {
+    return {
+      response: '它终于听懂了你绕来绕去的那一小块真心，并把这次互动轻轻盖章。',
+      isComplete: true,
     }
   }
 
@@ -40,6 +48,5 @@ export function matchResponse(
   return {
     response: task.fallbackResponse,
     isComplete: false,
-    isMaxRound: currentRound >= task.maxRounds,
   }
 }

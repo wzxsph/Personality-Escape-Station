@@ -113,15 +113,6 @@ export default function DialoguePanel({
       if (hotspot.fragmentId) {
         onFragmentCollected(hotspot.fragmentId)
       }
-    } else if (result.isMaxRound) {
-      setIsDisabled(true)
-      // 最大轮次达到，提示
-      const closeMsg: ChatMessage = {
-        id: 'close-hint',
-        role: 'agent',
-        text: '时间到了…下次再来探索吧。',
-      }
-      setMessages(prev => [...prev, closeMsg])
     }
   }, [archetypeId, inputValue, isDisabled, isCompleted, isSending, currentRound, dialogue, hotspot.id, hotspot.fragmentId, messages, onFragmentCollected])
 
@@ -196,9 +187,7 @@ export default function DialoguePanel({
                 {isSending ? '发送中' : '发送'}
               </button>
             </div>
-            <div className={styles.roundIndicator}>
-              剩余对话: {Math.max(dialogue.maxRounds - currentRound, 0)}/{dialogue.maxRounds}
-            </div>
+            <div className={styles.roundIndicator}>任务进行中 · 第 {currentRound + 1} 次回声</div>
           </div>
         )}
       </div>

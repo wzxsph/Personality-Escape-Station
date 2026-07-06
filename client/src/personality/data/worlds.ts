@@ -144,6 +144,7 @@ function createDefaultDialogue(config: WorldHotspot) {
       config.kind === 'npc'
         ? `${config.label}点了点头。它可能还没完全听懂，但已经决定先站在你这边。`
         : `${config.label}微微闪动了一下，像是在请你换一种说法再试试。`,
+    completionRound: 4,
     maxRounds: 3,
     taskDescription:
       config.kind === 'npc'
