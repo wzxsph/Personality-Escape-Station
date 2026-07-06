@@ -2,7 +2,7 @@
 
 `人格出逃空间站 / Personality Escape Station` 是一个移动端优先的人格测试与竖屏像素空间项目：用户完成 10 题测试，生成可分享的像素身份卡，再进入一个 9:16 的人格空间，里面包含地图、主角、道具、互动 Agent、人格碎片和串门链接。
 
-本项目基于 MIT License 的 WorldX 改造，但当前已经不再是旧 WorldX 前端或 demo-world 运行时。项目保留了 WorldX 中有价值的生成底座，并围绕「人格出逃空间站」重建产品体验。
+本项目基于 MIT License 的 WorldX 改造，但当前已经不再是旧 WorldX 前端或 demo-world 运行时。仓库包含可玩的「人格出逃空间站」游戏、固定生成资产、生图管线和 Cloudflare Worker 部署配置。Worker 部署只打包游戏运行时和 API，不暴露生图入口。
 
 ## 产品来源
 
@@ -102,9 +102,11 @@ http://localhost:3200
 npm run stop
 ```
 
-固定问卷、身份卡和人格空间浏览不需要模型 Key。生成资产和 Agent 聊天需要本地 `.env` 模型配置。真实 API Key 不应提交到仓库。
+固定问卷、身份卡和人格空间浏览不需要模型 Key。资产生成和 Agent 聊天需要模型配置。真实 API Key 不应提交到仓库。
 
 ## 资产生成
+
+仓库包含地图、主角帧、Agent 图片、道具图片、TMJ 碰撞、可走区和固定 manifest 的生图管线。这些脚本用于本地或维护者生成资产，不属于 Cloudflare Worker 的用户界面。
 
 推荐使用产品级统一命令：
 
@@ -129,7 +131,39 @@ npm run assets:generate -- --archetype JANK --only hotspot:jank-magnifier --forc
 - `--dry-run` 只生成 prompt 和 manifest 草稿，不调用图片 API。
 - `--skip-player` 适合图片模型不稳定时，先生成地图、道具和 Agent。
 - `--procedural-player` 会跳过图片 API，生成确定性的 8 方向主角帧。
-- 旧的 whole-image 地图生图管线仍保留用于实验；固定人格空间默认使用 `composite-v1`。
+- 固定人格空间默认地图策略为 `composite-v1`。
+
+## Cloudflare Workers 部署
+
+本仓库已经配置为 Cloudflare Worker 托管游戏：
+
+- Vite 会将游戏构建到 `client/dist`。
+- Worker Static Assets 负责托管 SPA 和固定游戏资产。
+- `worker/src/index.ts` 处理 `/api/*`，包括 Minimax Agent 聊天。
+- 生图管线保留在仓库中，但不会被 Worker 部署暴露或运行。
+
+命令：
+
+```bash
+npm run cf:dry-run
+npm run cf:dev
+npm run cf:deploy
+```
+
+部署 Agent 聊天前，把 Minimax API Key 配置为 Worker secret：
+
+```bash
+npx wrangler secret put OPENAI_API_KEY
+```
+
+运行时默认配置在 `wrangler.toml`：
+
+```toml
+OPENAI_BASE_URL = "https://api.minimaxi.com/v1"
+OPENAI_MODEL = "minimax-m3"
+```
+
+Worker 默认用内存保存房间和访问事件。若需要持久化串门事件，可创建 Cloudflare KV 命名空间，并在 `wrangler.toml` 中绑定为 `ROOMS_KV`。
 
 ## 校验命令
 
@@ -137,6 +171,7 @@ npm run assets:generate -- --archetype JANK --only hotspot:jank-magnifier --forc
 npm run verify:personality
 npm run verify:fixed-assets:strict
 npm run typecheck:client
+npm run typecheck:worker
 cd server && npm run typecheck
 cd client && npm run build
 ```
@@ -163,9 +198,11 @@ client/src/personality/        H5 产品源码
 client/public/personality-assets/fixed/
                                12 套固定人格空间资产库
 server/src/                    Express API 与 SQLite 持久化
+worker/src/                    Cloudflare Worker API 与 Minimax 聊天运行时
+wrangler.toml                  Cloudflare Worker 部署配置
 generators/personality/        固定人格资产生成管线
-generators/map/                保留的地图生成实验能力
-generators/character/          保留的角色/道具图片生成能力
+generators/map/                地图生成底座
+generators/character/          角色/道具图片生成管线
 scripts/generate-assets.mjs    产品级统一资产生成命令
 ```
 

@@ -2,7 +2,7 @@
 
 Personality Escape Station is a mobile-first personality test and vertical pixel-room experience. Users answer a fixed 10-question test, receive a shareable pixel identity card, and enter a 9:16 personality room with props, NPC/Agent interactions, fragments, and visit links.
 
-This project is derived from the MIT-licensed WorldX project, but it is no longer the old WorldX frontend or demo-world runtime. The current product keeps the useful generation foundation and rebuilds it around `人格出逃空间站 / Personality Escape Station`.
+This project is derived from the MIT-licensed WorldX project, but it is no longer the old WorldX frontend or demo-world runtime. The repository includes the playable `人格出逃空间站 / Personality Escape Station` game, fixed generated assets, the asset-generation pipeline, and Cloudflare Worker deployment. The Worker deployment packages the game runtime and API only; it does not expose an image-generation UI.
 
 [中文说明](./README_ZH.md)
 
@@ -104,9 +104,11 @@ Stop dev servers:
 npm run stop
 ```
 
-The fixed questionnaire and room browsing flow does not require model keys. Asset generation and LLM dialogue require local `.env` model configuration. Do not commit real API keys.
+The fixed questionnaire and room browsing flow does not require model keys. Asset generation and Agent chat require model configuration. Do not commit real API keys.
 
 ## Asset Generation
+
+The repository includes the asset-generation pipeline for maps, player frames, Agent images, prop images, TMJ collision, walkable grids, and fixed manifests. These scripts are for local/maintainer use and are not part of the Cloudflare Worker user interface.
 
 Use the product-level command:
 
@@ -131,7 +133,39 @@ Notes:
 - `--dry-run` writes prompts and draft manifests without image API calls.
 - `--skip-player` is useful when image models are unstable but maps, props, and Agents should still be generated.
 - `--procedural-player` creates deterministic 8-direction player frames without calling the image API.
-- The legacy whole-image map pipeline is retained only for experiments; fixed rooms should use `composite-v1`.
+- The default fixed-room map strategy is `composite-v1`.
+
+## Cloudflare Workers
+
+This repository is configured to deploy the game as a Cloudflare Worker with static assets:
+
+- Vite builds the game into `client/dist`.
+- Worker Static Assets serve the SPA and fixed game assets.
+- `worker/src/index.ts` handles `/api/*`, including Minimax Agent chat.
+- The image-generation pipeline remains in the repository but is not exposed or run by the Worker deployment.
+
+Commands:
+
+```bash
+npm run cf:dry-run
+npm run cf:dev
+npm run cf:deploy
+```
+
+Before deploying Agent chat, configure the Minimax API key as a Worker secret:
+
+```bash
+npx wrangler secret put OPENAI_API_KEY
+```
+
+Runtime defaults are defined in `wrangler.toml`:
+
+```toml
+OPENAI_BASE_URL = "https://api.minimaxi.com/v1"
+OPENAI_MODEL = "minimax-m3"
+```
+
+Room/event persistence uses in-memory storage by default on Workers. For durable visit events, create a Cloudflare KV namespace and bind it as `ROOMS_KV` in `wrangler.toml`.
 
 ## Verification
 
@@ -139,6 +173,7 @@ Notes:
 npm run verify:personality
 npm run verify:fixed-assets:strict
 npm run typecheck:client
+npm run typecheck:worker
 cd server && npm run typecheck
 cd client && npm run build
 ```
@@ -165,9 +200,11 @@ client/src/personality/        H5 product source
 client/public/personality-assets/fixed/
                                retained 12-room fixed asset library
 server/src/                    Express API and SQLite persistence
+worker/src/                    Cloudflare Worker API and Minimax chat runtime
+wrangler.toml                  Cloudflare Worker deployment config
 generators/personality/        fixed personality asset pipeline
-generators/map/                retained map-generation experiments
-generators/character/          retained character/prop image pipeline
+generators/map/                map-generation foundation
+generators/character/          character/prop image pipeline
 scripts/generate-assets.mjs    product-level asset generation command
 ```
 

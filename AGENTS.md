@@ -8,9 +8,11 @@ Keep the project focused on:
 
 - `client/src/personality`: the H5 product.
 - `server/src/api/routes/personality.ts`: minimal personality room API.
+- `worker/src`: Cloudflare Worker API and Minimax Agent chat runtime.
+- `client/public/personality-assets/fixed`: retained fixed game assets.
 - `generators`: retained image-generation foundation for vertical maps, protagonists, interactive agents, and props.
 
-Do not reintroduce old WorldX frontend, simulation runtime, funeral/mourner mode, demo worlds, or old product docs.
+Do not reintroduce old WorldX frontend, simulation runtime, funeral/mourner mode, demo worlds, or old product docs. Cloudflare Worker deployment should remain game-first and must not expose a user-facing image-generation UI unless explicitly requested.
 
 ## Generation Modes
 
@@ -30,10 +32,11 @@ Try `mcp__fast_context__fast_context_search` first for exploratory code search. 
 
 ## Verification
 
-Run after product, scoring, API, or generator changes:
+Run after product, scoring, API, generator, or Worker changes:
 
 ```bash
 npm run verify:personality
 npm run typecheck:client
+npm run typecheck:worker
 cd server && npm run typecheck
 ```

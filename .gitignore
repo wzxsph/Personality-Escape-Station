@@ -6,6 +6,7 @@
 # Dependencies and build outputs
 node_modules/
 .venv/
+.wrangler/
 dist/
 build/
 coverage/

@@ -5,7 +5,7 @@
   "repository": "",
   "type": "module",
   "scripts": {
-    "postinstall": "cd client && npm install && cd ../server && npm install && cd ../generators && npm install",
+    "postinstall": "npm install --prefix client && npm install --prefix server && npm install --prefix generators",
     "dev": "node scripts/dev.mjs",
     "stop": "node scripts/stop-dev.mjs",
     "dev:server": "cd server && npm run dev",
@@ -15,19 +15,23 @@
     "verify:fixed-assets:strict": "cd client && npm run verify:fixed-assets:strict",
     "verify:fixed-asset": "cd client && npm run verify:fixed-asset --",
     "typecheck:client": "cd client && npm run typecheck",
+    "typecheck:worker": "tsc -p worker/tsconfig.json --noEmit",
     "assets:generate": "node scripts/generate-assets.mjs",
     "assets:generate:maps": "node scripts/generate-assets.mjs --all --only map",
     "assets:generate:dry-run": "node scripts/generate-assets.mjs --all --dry-run",
     "generate:map": "node generators/map/src/index.mjs",
     "generate:character": "node generators/character/src/index.mjs",
     "generate:fixed-assets": "tsx generators/personality/src/generate-fixed-assets.ts",
-    "generate:fixed-asset": "tsx generators/personality/src/generate-fixed-assets.ts"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7"
+    "generate:fixed-asset": "tsx generators/personality/src/generate-fixed-assets.ts",
+    "cf:build": "npm --prefix client run build",
+    "cf:dry-run": "npm run cf:build && wrangler deploy --dry-run",
+    "cf:dev": "npm run cf:build && wrangler dev",
+    "cf:deploy": "npm run cf:build && wrangler deploy"
   },
   "devDependencies": {
-    "tsx": "^4.21.0",
-    "typescript": "^5.7.3"
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "tsx": "^4.23.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.107.0"
   }
 }
