@@ -1,6 +1,7 @@
 import { questions } from '../src/personality/data/questions'
 import { results } from '../src/personality/data/results'
 import { hiddenArchetypeId, personaMaxScores, regularArchetypeIds } from '../src/personality/data/types'
+import { worldConfigs } from '../src/personality/data/worlds'
 import { scanRecord } from '../src/personality/lib/contentSafety'
 
 const safetyIssues = [...scanRecord('questions', questions), ...scanRecord('results', results)]
@@ -45,6 +46,17 @@ const resultIds = new Set(results.map((result) => result.id))
 for (const personaId of [...regularArchetypeIds, hiddenArchetypeId]) {
   if (!resultIds.has(personaId)) {
     structureIssues.push(`missing result for ${personaId}`)
+  }
+}
+
+for (const [worldId, world] of Object.entries(worldConfigs)) {
+  for (const hotspot of world.hotspots) {
+    if (!hotspot.dialogue) {
+      structureIssues.push(`${worldId}/${hotspot.id} missing dialogue`)
+    }
+    if (hotspot.kind === 'npc' && !hotspot.dialogue) {
+      structureIssues.push(`${worldId}/${hotspot.id} npc must open dialogue panel`)
+    }
   }
 }
 

@@ -102,7 +102,55 @@ export interface WorldConfig {
   escapeSubtitle?: string
 }
 
-const hotspot = (config: WorldHotspot): WorldHotspot => config
+const hotspot = (config: WorldHotspot): WorldHotspot => ({
+  ...config,
+  dialogue: config.dialogue ?? createDefaultDialogue(config),
+})
+
+function createDefaultDialogue(config: WorldHotspot) {
+  const subject = config.kind === 'npc' ? '它' : config.label
+  const openingLine = config.lines[0] ?? config.summary
+  const secondLine = config.lines[1] ?? config.reaction
+  return {
+    greeting:
+      config.kind === 'npc'
+        ? `${config.label}注意到了你，像是已经准备好接住你丢来的第一句话。`
+        : `${config.label}轻轻亮了一下，似乎正在等你靠近并说点什么。`,
+    hintPlaceholder:
+      config.kind === 'npc'
+        ? `和${config.label}说说你现在的状态...`
+        : `告诉${config.label}你想处理什么...`,
+    responses: [
+      {
+        id: 'default-feeling',
+        keywords: ['累', '困', '烦', '难过', '焦虑', '害怕', '压力', '撑不住'],
+        response: `${subject}安静了一秒，然后回应你：${openingLine}`,
+        isTaskComplete: true,
+      },
+      {
+        id: 'default-need',
+        keywords: ['想', '需要', '希望', '可以', '帮我', '怎么办', '为什么'],
+        response: `${subject}像是听懂了你的请求。${secondLine}`,
+        isTaskComplete: true,
+      },
+      {
+        id: 'default-escape',
+        keywords: ['逃', '离开', '休息', '暂停', '消失', '下线', '不想'],
+        response: `${subject}把周围的声音调低了一点。${config.reaction}`,
+        isTaskComplete: true,
+      },
+    ],
+    fallbackResponse:
+      config.kind === 'npc'
+        ? `${config.label}点了点头。它可能还没完全听懂，但已经决定先站在你这边。`
+        : `${config.label}微微闪动了一下，像是在请你换一种说法再试试。`,
+    maxRounds: 3,
+    taskDescription:
+      config.kind === 'npc'
+        ? `和${config.label}聊聊`
+        : `与${config.label}互动`,
+  }
+}
 
 const decoration = (config: WorldDecoration): WorldDecoration => config
 
